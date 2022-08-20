@@ -23,8 +23,12 @@
     background-color: aqua;
 }*/
 /*Grouping Selector*/
-h1,.para,#p1{
+/*h1,.para,#p1{
     color: orange;
+}*/
+/*psudo class selector*/
+h1:hover{
+    color: blue;
 }
 
 
