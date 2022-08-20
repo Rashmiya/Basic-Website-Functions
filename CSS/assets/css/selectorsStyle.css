@@ -8,9 +8,16 @@
 /**{
     font-size: 20px;
 }*/
-#p1{
+/*ID Selector*/
+/*#p1{
     color: #e51010;
+}*/
+/*Class Selector*/
+.para{
+    color: blue;
+    border: 3px solid yellow;
 }
+
 
 
 
