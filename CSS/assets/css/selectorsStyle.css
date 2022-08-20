@@ -18,9 +18,13 @@
     border: 3px solid yellow;
 }*/
 /*Attribute Selector -  select elements using attributes*/
-[id]{
+/*[id]{
     color: brown;
     background-color: aqua;
+}*/
+/*Grouping Selector*/
+h1,.para,#p1{
+    color: orange;
 }
 
 
