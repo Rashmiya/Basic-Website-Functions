@@ -27,7 +27,18 @@
     color: orange;
 }*/
 /*psudo class selector*/
-h1:hover{
+/*h1:hover{
+    color: blue;
+}*/
+
+/*Pesudo Class*/
+h1:first-child{
+    color: red;
+}
+h1:nth-child(2){
+    color: brown;
+}
+h1:nth-child(4){
     color: blue;
 }
 
