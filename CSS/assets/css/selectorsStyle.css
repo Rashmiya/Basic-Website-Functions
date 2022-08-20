@@ -1,12 +1,18 @@
 /*Type Selector*/
-h1{
+/*h1{
     color: red;
     font-size: 60px;
     border: black;
-}
+}*/
 /*Universal Selector*/
-*{
+/**{
     font-size: 20px;
+}*/
+#p1{
+    color: #e51010;
 }
+
+
+
 
 
