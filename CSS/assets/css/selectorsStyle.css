@@ -1,23 +1,27 @@
-/*Type Selector*/
+/*Type Selector - To select elements from its type*/
 /*h1{
     color: red;
     font-size: 60px;
     border: black;
 }*/
-/*Universal Selector*/
+/*Universal Selector - To select all elements at once.*/
 /**{
     font-size: 20px;
 }*/
-/*ID Selector*/
+/*ID Selector-  To select unique element*/
 /*#p1{
     color: #e51010;
 }*/
-/*Class Selector*/
-.para{
+/*Class Selector - To select group of element*/
+/*.para{
     color: blue;
     border: 3px solid yellow;
+}*/
+/*Attribute Selector -  select elements using attributes*/
+[id]{
+    color: brown;
+    background-color: aqua;
 }
-
 
 
 
