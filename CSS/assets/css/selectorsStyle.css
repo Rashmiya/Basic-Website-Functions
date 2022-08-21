@@ -57,8 +57,16 @@ h1:after{
 a:hover{
     color:green;
 }*/
-input:focus{
+/*input:focus{
     background-color: orange;
+}*/
+h1::first-letter{
+    color: red;
+    font-size: 35px;
+}
+p::first-line{
+    color: deeppink;
+    font-weight: bold;
 }
 
 
