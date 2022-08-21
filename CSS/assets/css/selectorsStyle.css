@@ -60,15 +60,20 @@ a:hover{
 /*input:focus{
     background-color: orange;
 }*/
-h1::first-letter{
+/*h1::first-letter{
     color: red;
     font-size: 35px;
 }
 p::first-line{
     color: deeppink;
     font-weight: bold;
-}
+}*/
 
+input::placeholder{
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: lighter;
+}
 
 
 
