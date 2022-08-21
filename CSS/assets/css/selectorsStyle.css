@@ -32,7 +32,7 @@
 }*/
 
 /*Pesudo Class*/
-h1:first-child{
+/*h1:first-child{
     color: red;
 }
 h1:nth-child(2){
@@ -43,14 +43,24 @@ h1:nth-child(4){
 }
 li:last-child{
     color: darkblue;
-}
-h1:before{
+}*/
+/*h1:before{
     content: "😍";
     font-size: 22px;
 }
 h1:after{
     content: "😅";
+}*/
+/*a:active{
+    color: deeppink;
 }
+a:hover{
+    color:green;
+}*/
+input:focus{
+    background-color: orange;
+}
+
 
 
 
