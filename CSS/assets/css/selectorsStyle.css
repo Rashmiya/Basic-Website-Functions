@@ -44,6 +44,14 @@ h1:nth-child(4){
 li:last-child{
     color: darkblue;
 }
+h1:before{
+    content: "😍";
+    font-size: 22px;
+}
+h1:after{
+    content: "😅";
+}
+
 
 
 
