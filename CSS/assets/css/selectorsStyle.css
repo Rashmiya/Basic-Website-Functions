@@ -76,8 +76,14 @@ input::placeholder{
     font-weight: lighter;
 }
 */
-input::file-selector-button{
+/*input::file-selector-button{
     color: red;
+}*/
+/*Text ekk api select krgnnkota, eke colors change krgnn pluwn me selction eken.*/
+p::selection{
+    color: red;
+    background-color: white;
+    border: 5px;
 }
 
 
