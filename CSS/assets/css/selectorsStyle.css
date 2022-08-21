@@ -80,10 +80,16 @@ input::placeholder{
     color: red;
 }*/
 /*Text ekk api select krgnnkota, eke colors change krgnn pluwn me selction eken.*/
-p::selection{
+/*p::selection{
     color: red;
     background-color: white;
     border: 5px;
+}*/
+/*Can make our own style with this.*/
+li::marker{
+    content: "# ";
+    font-weight: bold;
+
 }
 
 
