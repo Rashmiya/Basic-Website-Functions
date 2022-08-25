@@ -1,0 +1,12 @@
+/*child combinator*/
+section>h1{
+    color: red;
+}
+body>h1{
+    color: deeppink;
+}
+
+
+
+
+
