@@ -1,11 +1,17 @@
 /*child combinator*/
+/*
 section>h1{
     color: red;
 }
 body>h1{
     color: deeppink;
 }
-
+*/
+/*Decendent Combinator*/
+body h1{
+    color: orange;
+    border: 2px solid blue;
+}
 
 
 
