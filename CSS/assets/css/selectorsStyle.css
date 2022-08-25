@@ -86,13 +86,19 @@ input::placeholder{
     border: 5px;
 }*/
 /*Can make our own style with this.*/
-li::marker{
+/*li::marker{
     content: "# ";
     font-weight: bold;
 
+}*/
+
+li:nth-child(3){
+    color: rgba(217, 26, 26, 0.47);
 }
-
-
+p:nth-child(6){
+    color: deeppink;
+    font-size: 20px;
+}
 
 
 
