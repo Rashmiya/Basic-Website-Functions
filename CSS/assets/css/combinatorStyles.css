@@ -14,8 +14,14 @@ body>h1{
 }*/
 
 /*adjacent combinator*/
-h1+p{
+/*h1+p{
     color: red;
-}
+}*/
 
+/*general siblings combinator*/
+h1~ul{
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: bold;
+}
 
