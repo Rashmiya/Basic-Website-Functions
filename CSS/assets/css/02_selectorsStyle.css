@@ -4,28 +4,34 @@
     font-size: 60px;
     border: black;
 }*/
+
 /*Universal Selector - To select all elements at once.*/
 /**{
     font-size: 20px;
 }*/
+
 /*ID Selector-  To select unique element*/
 /*#p1{
     color: #e51010;
 }*/
+
 /*Class Selector - To select group of element*/
 /*.para{
     color: blue;
     border: 3px solid yellow;
 }*/
+
 /*Attribute Selector -  select elements using attributes*/
 /*[id]{
     color: brown;
     background-color: aqua;
 }*/
+
 /*Grouping Selector*/
 /*h1,.para,#p1{
     color: orange;
 }*/
+
 /*psudo class selector*/
 /*h1:hover{
     color: blue;
@@ -60,6 +66,8 @@ a:hover{
 /*input:focus{
     background-color: orange;
 }*/
+
+/*Psudo element selctor*/
 /*h1::first-letter{
     color: red;
     font-size: 35px;
@@ -76,15 +84,18 @@ input::placeholder{
     font-weight: lighter;
 }
 */
+
 /*input::file-selector-button{
     color: red;
 }*/
+
 /*Text ekk api select krgnnkota, eke colors change krgnn pluwn me selction eken.*/
 /*p::selection{
     color: red;
     background-color: white;
     border: 5px;
 }*/
+
 /*Can make our own style with this.*/
 /*li::marker{
     content: "# ";
