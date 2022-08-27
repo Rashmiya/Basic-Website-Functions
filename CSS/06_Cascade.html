@@ -16,27 +16,27 @@
 
     /*ID selector*/
     #myHeading {
-      color: crimson;
-    }
-
-    /*class selector*/
-    .h1class{
-      color: blue !important;
-    }
-
-    /*attribute selector*/
-    [id]{
-      color: orange;
+      color: crimson !important;
     }
 
     /*Psudo class selector*/
    :first-child{
      color: black;
    }
+
+    /*attribute selector*/
+    [id]{
+        color: orange;
+    }
+
+    /*class selector*/
+    .h1class{
+        color: blue;
+    }
   </style>
 </head>
 <body>
 <!--Inline selector-->
-<h1 style = "color: green" id="myHeading" class="h1class">Cascading</h1>
+<h1  style = "color: green" id="myHeading" class="h1class">Cascading</h1>
 </body>
 </html>
