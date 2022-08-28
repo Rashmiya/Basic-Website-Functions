@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cascade Styles Sheets</title>
+    <style>
+        /*output*/
+        /*
+        chocolate
+        darksalmon
+        darkmagenta
+        burlywood
+        green
+        red
+        darkblue
+        blueviolet
+        aqua
+        orange
+        deeppink
+        yellow
+        */
+        /*type+ID = 1+100 = 101*/
+        h1#selectID{
+            color: red;
+        }
+        /*type+class = 1+10 = 11 */
+        h1.selectClass{
+            color: deeppink;
+        }
+        /*type+ID+class = 1+100+10 = 111 */
+        h1#selectID.selectClass{
+            color: burlywood;
+        }
+        /*class+ID = 10+100 = 110 */
+        .mainClass #selectID{
+            color: green;
+        }
+        /*class selector = 10*/
+        .selectClass{
+            color: yellow;
+        }
+        /*class+type = 10+1 = 11 */
+        .mainClass h1 {
+            color: orange;
+        }
+        /*type+type+type+pseudo+type = 1+1+1+10+1 = 14 */
+        body>main>section:nth-child(2) h1{
+            color: aqua;
+        }
+        /*type+type+type+pseudo+type+type+pseudo+type+class*/
+        /*1+1+1+10+1+1+10+1+10 = 30+6 = 36 */
+        body>main>section:nth-child(2)>article>div:nth-child(2)>h1.selectClass{
+            color: chocolate!important;
+        }
+        /*type+type+type+pseudo+type+type+pseudo+type+class*/
+        /*1+1+1+10+1+1+10+1+10 = 30+6 = 36 */
+        body>main>section:nth-child(2)>article>div:nth-child(2) h1.selectClass{
+            color: darkblue;
+        }
+        /*combination of selectors = type+type+class+ID+type+pseudo+type+ID+class+type+ID+type+pseudo+type+class*/
+        /*1 + 1 + 10 + 100 + 1 + 10 + 1 +10 + 100 + 1 + 100 + 1 + 10 + 1 + 10 = 300+50+7 = 357 */
+        body>main.mainClass#mainID>section:nth-child(2)>article#mainArticle.mainArticle>div#selected-div:nth-child(2) h1.selectClass{
+            color: darkmagenta;
+        }
+        /*class selector+class selector = 10+10 = 20 */
+        .mainArticle .selectClass{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<main class="mainClass" id="mainID">
+    <section></section>
+    <section id="mainSection" class="mainSection">
+        <article id="mainArticle" class="mainArticle">
+            <div></div>
+            <div id="selected-div" class="selectedClass">
+                <!--Inline selector-->
+                <h1 id="selectID" class="selectClass" style="color: darksalmon">Hello there..! Cascade Style Sheets</h1>
+            </div>
+            <div></div>
+        </article>
+    </section>
+    <section></section>
+</main>
+</body>
+</html>
