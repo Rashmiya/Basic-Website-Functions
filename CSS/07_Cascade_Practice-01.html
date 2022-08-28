@@ -4,38 +4,56 @@
   <meta charset="UTF-8">
   <title>Cascading Style Sheets</title>
   <style>
+/*class selector  = 10*/
     .h1Group {
       color: blue;
     }
-
+/*pseudo class selecor   = 10*/
     :first-child {
       color: black;
     }
-
+/*ID selector  =  100*/
     #myHeading {
       color: crimson;
     }
-
+/*attribute selector =  10*/
     [id] {
       color: orange;
     }
-
+/*combined with 2 selectors = Type selector  =  1+1 =  2*/
     body h1 {
       color: deeppink;
     }
-
+/*Type selector   =  1*/
     h1 {
       color: purple;
     }
-
+/*universal selector  = 1*/
+*{
+  color: yellow;
+}
+/*combined with 2 selectors = Type selector  =  1+1  = 2*/
     body > h1 {
       color: red;
     }
   </style>
 </head>
 <body>
-
+<!--Inline selector   =  1000-->
 <h1 class="h1Group" id="myHeading" style="color: green;">Cascading</h1>
+</body>
+</html>
+
+<!--Order procedure-->
+<!--
+Inline selector  = 1000
+ID selector      =  100
+class, pseudo class, attribute selector   =   10
+type selector, pseudo element selector    =    1
+-->
+
+<!--===============================================-->
+
 <!--Output-->
 <!--
 green    -  Inline selector
@@ -43,10 +61,8 @@ crimson  -  ID selector
 orange   -  attribute selector
 black    -  pseudo class selector
 blue     -  class selector
-deeppink -  Type selector  in last order
-red      -  Type selector second last order
+red      -  Type selector with high value and last order
+deeppink -  Type selector with high value and last-second order
 purple   -  Type selector third last order
 yellow   -  Universal selector
 -->
-</body>
-</html>
