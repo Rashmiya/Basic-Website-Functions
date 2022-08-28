@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <title>Cascading Style Sheets - Test 02</title>
     <style>
+        /*Type selector = 1 */
         h1{
             color: red;
         }
+        /*ID selector = 100 */
         #selectID{
             color: green;
         }
+        /*class selector = 10 */
         .selectClass{
             color: yellow;
         }
+        /*combined 2 selectors = class selector+type selector  = 10+1 = 11 */
         .mainClass h1 {
             color: orange;
         }
+        /*combined 5 selectors = type+type+type+pseudo class+type = 1+1+1+10+1 = 14 */
         body>main>section:nth-child(2) h1{
             color: aqua;
         }
+        /*combined with 8 selectors = type+type+type+pseudo class+type+type+pseudo class+type = 1+1+1+10+1+1+10+1 = 26*/
         body>main>section:nth-child(2)>article>div:nth-child(2)>h1{
             color: chocolate;
         }
+        /*combined with 8 selectors = type+type+type+pseudo class+type+type+pseudo class+type = 1+1+1+10+1+1+10+1 = 26 */
         body>main>section:nth-child(2)>article>div:nth-child(2) h1{
             color: darkblue;
         }
@@ -43,3 +50,13 @@
 </main>
 </body>
 </html>
+
+<!--output-->
+<!--
+green
+darkblue
+chocolate
+aqua
+orange
+yellow
+red-->
