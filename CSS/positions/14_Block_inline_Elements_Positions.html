@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Block-Inline Positions</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <style>
+      /*There are two types of elements
+          Block Level Elements
+              Get the parent full with 100%
+              Box Model Ok
+              Vertically, One after another
+
+          Inline Level Elements
+              Only get the content space
+              Width & Height Not Working
+              No Line Breaks
+              Box model not working properly
+       */
+      h1{
+          display: inline;
+          border: 2px solid red;
+      }
+      img{
+          height: 200px;
+          width: 200px;
+      }
+      ul>li{
+          display: inline-block;
+          border: 1px solid red;
+          margin-right: 10px;
+      }
+</style>
+</head>
+<body>
+<h1>Hello There... CSS</h1>
+<h1>Hello There... CSS</h1>
+<h1>Hello There... CSS</h1>
+<h1>Hello There... CSS</h1>
+
+<img src="../assets/images/natureLove-1.jpg" alt="">
+<img src="../assets/images/natureLove-2.jpg" alt="">
+<img src="../assets/images/natureLove-3.jpg" alt="">
+
+<div>
+  DIV ONE
+</div>
+
+<h1>Cascading Style Sheets</h1>
+
+<div>
+  DIV TWO
+</div>
+
+<button>Save Customer</button>
+<button>Delete Customer</button>
+<button>Search Customer</button>
+<button>Update Customer</button>
+
+<h1>Hello HTML</h1>
+
+<ul>
+    <li>list One</li>
+    <li>list Two</li>
+    <li>list Three</li>
+    <li>list Four</li>
+</ul>
+</body>
+</html>
