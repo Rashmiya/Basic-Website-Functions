@@ -5,11 +5,13 @@
     <title>CSS Assignment  - case 01</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
+        /*main section*/
         body>main{
             width:98vw;
             height:100vh;
             position: relative;
         }
+        /*4 section parts*/
         body>main>section:first-child{
             background-color: red;
             position: absolute;
@@ -43,6 +45,19 @@
             height: 50%;
             right: 0px;
             bottom: 0px;
+        }
+        /*center div area in each sections*/
+        body>main>section>div{
+            position: absolute;
+            width:167px;
+            height:167px;
+            background-color: white;
+            border-radius: 100%;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            margin: Auto;
         }
     </style>
 </head>
