@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Relative Positions</title>
+    <title>CSS Positions</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <style>
         /*CSS Positions*/
@@ -14,17 +14,25 @@
         04-Fixed
         05-Sticky
         */
-        div{
+        body>div:first-child{
             border: 2px solid red;
-            background-color: red;
+            background-color: blue;
             height: 200px;
             width: 200px;
-            left:100px;
-            /*Relative Position*/
- /*we can move a selected element whereever we want without breaking the flow*/
-            position: relative;
-            top: 100px;
+            /*Absolute Position*/
+/*After applying absolute, it removed from the normal flow
+  Then that element decide to position according to the parent element.
+*/
+          position: absolute;
+            bottom: 0;  /*view port eke anthimt ynne*/
+            right: 0;
          }
+      #div{
+            border: 2px solid purple;
+            background-color: yellow;
+            width: 300px;
+            height: 250px;
+        }
         img{
             width: 200px;
             height: 200px;
@@ -32,23 +40,23 @@
     </style>
 </head>
 <body>
-<div>
+    <div>
 
-</div>
-<h1>Hello There... CSS</h1>
-<h1>Hello There... CSS</h1>
-<h1>Hello There... CSS</h1>
-<h1>Hello There... CSS</h1>
+    </div>
+    <h1>Hello There... CSS</h1>
+    <h1>Hello There... CSS</h1>
+    <h1>Hello There... CSS</h1>
+    <h1>Hello There... CSS</h1>
 
-<img src="../assets/images/natureLove-1.jpg" alt="">
-<img src="../assets/images/natureLove-2.jpg" alt="">
-<img src="../assets/images/natureLove-3.jpg" alt="">
+    <img src="../assets/images/natureLove-1.jpg" alt="">
+    <img src="../assets/images/natureLove-2.jpg" alt="">
+    <img src="../assets/images/natureLove-3.jpg" alt="">
 
-<div>
+    <div id = div>
     DIV ONE
-</div>
+    </div>
 
-<h1>Cascading Style Sheets</h1>
+    <h1>Cascading Style Sheets</h1>
 
 <div>
     DIV TWO
