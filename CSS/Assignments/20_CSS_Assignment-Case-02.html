@@ -36,18 +36,42 @@
         main{
             /*paragraph eke content ekata anuwa, aside eke height eka adjust wenna one hinda  ,
             aside eke parent wena main eke position eka static nowena ekk denwa*/
-           position: relative;
-            border: 2px solid red;
+            position: relative;
         }
         main>aside{
             position: absolute;
-            border: 2px solid blue;
-            background-color: blue;
+            background-color: #4C0082;
             top: 0;
             bottom: 0;
-            width: 300px;
+            width: 270px;
             /*left:0;
             right:0;*/
+        }
+        main>aside>ul>li{
+            color: white;
+            padding-top: 28px;
+            list-style: none;
+        }
+        main>section{
+            margin-left: 290px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        main>section>article>p{
+            margin-top: 0;
+        }
+        main>section>article>p:last-child{
+            margin-bottom: 0;
+        }
+        /*footer*/
+        footer{
+            height: 50px;
+            background-color: #808080;
+        }
+        #footer{
+            margin-top: 0;
+            text-align: center;
+            padding: 18px;
         }
     </style>
 </head>
@@ -61,27 +85,29 @@
                 <li>Home</li>
                 <li>Services</li>
                 <li>Contacts</li>
-                <li>About Me</li>
+                <li>About Us</li>
             </ul>
         </nav>
     </header>
     <main>
       <!--  Side navigation Area-->
         <aside>
-            <nav>
                 <ul>
                     <li>Home</li>
                     <li>Services</li>
                     <li>Contacts</li>
-                    <li>About Me</li>
+                    <li>About Us</li>
                 </ul>
-            </nav>
         </aside>
 
         <!--right side main content-->
         <section>
             <!--for Gif images-->
-                <section></section>
+                <section>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </section>
             <!--for paragraph contents-->
                 <article>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
@@ -137,7 +163,7 @@
         </section>
     </main>
     <footer>
-        <h6>Developed by IJSE</h6>
+        <h5 id="footer">Developed by IJSE</h5>
     </footer>
 </body>
 </html>
