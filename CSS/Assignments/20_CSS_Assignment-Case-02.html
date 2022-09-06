@@ -5,6 +5,9 @@
     <title>Assignment - Case 02 (Fixed and Sticky Position)</title>
     <link rel="stylesheet" href="../assets/css/normalize.css">
     <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
         body>header{
             position: relative;
             width: 100vw;
@@ -13,12 +16,33 @@
             background-color: white;
             box-shadow: 1px 1.3px 3px 2px #403e3e;  /*  right side eke shadow area eka- shadow eka yatata withrk kochchrk penna oneda kiyn eka- wateta apply wena area eka(opacity)- watetama apply wena width height eka - color*/
         }
+        header>img{
+            position: relative;
+            width: 190px;
+            top: 15px;
+            left: 20px;
+        }
+        header>nav{
+            position: absolute;
+            top: 0px;
+            right: 40px;
+        }
+        header>nav>ul>li{
+            display: inline-block;
+            padding: 10px;
+            color: #3c3a3a;
+            cursor: pointer;
+        }
+        main{
+            border: 2px solid red;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <!--IJSE logo-->
-
+        <img src="../assets/images/IJSE_logo.jpg" alt="this is IJSE Logo">
         <!--Navigation side-->
         <nav>
             <ul>
@@ -30,8 +54,9 @@
         </nav>
     </header>
     <main>
+        <div></div>
         <!--Side navigation Area-->
-        <aside>
+       <!-- <aside>
             <nav>
                 <ul>
                     <li>Home</li>
@@ -42,11 +67,11 @@
             </nav>
         </aside>
 
-        <!--right side main content-->
+        &lt;!&ndash;right side main content&ndash;&gt;
         <section>
-            <!--for Gif images-->
+            &lt;!&ndash;for Gif images&ndash;&gt;
                 <section></section>
-            <!--for paragraph contents-->
+            &lt;!&ndash;for paragraph contents&ndash;&gt;
                 <article>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
                         eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
@@ -61,7 +86,7 @@
                         velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
                         quasi, veniam veritatis voluptas.</p>
                 </article>
-        </section>
+        </section>-->
     </main>
     <footer>
         <h6>Developed by IJSE</h6>
