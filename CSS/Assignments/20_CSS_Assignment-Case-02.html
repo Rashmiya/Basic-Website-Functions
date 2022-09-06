@@ -34,16 +34,20 @@
             cursor: pointer;
         }
         main{
+            /*paragraph eke content ekata anuwa, aside eke height eka adjust wenna one hinda  ,
+            aside eke parent wena main eke position eka static nowena ekk denwa*/
+           position: relative;
             border: 2px solid red;
         }
-        main>div{
+        main>aside{
             position: absolute;
             border: 2px solid blue;
             background-color: blue;
             top: 0;
             bottom: 0;
-          /*  right: 0;
-            left: 0;*/
+            width: 300px;
+            /*left:0;
+            right:0;*/
         }
     </style>
 </head>
@@ -62,9 +66,8 @@
         </nav>
     </header>
     <main>
-        <div></div>
-        <!--Side navigation Area-->
-       <!-- <aside>
+      <!--  Side navigation Area-->
+        <aside>
             <nav>
                 <ul>
                     <li>Home</li>
@@ -75,11 +78,11 @@
             </nav>
         </aside>
 
-        &lt;!&ndash;right side main content&ndash;&gt;
+        <!--right side main content-->
         <section>
-            &lt;!&ndash;for Gif images&ndash;&gt;
+            <!--for Gif images-->
                 <section></section>
-            &lt;!&ndash;for paragraph contents&ndash;&gt;
+            <!--for paragraph contents-->
                 <article>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
                         eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
@@ -93,8 +96,45 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate illum ipsa qui
                         velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
                         quasi, veniam veritatis voluptas.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
+                        eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
+                        tempore ullam velit voluptates?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam labore libero! Ab,
+                        aspernatur beatae commodi cupiditate debitis dolor eum iste officia omnis quidem quisquam,
+                        repellat sed totam vitae voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda eum expedita
+                        facere fuga harum id impedit, itaque labore perferendis porro possimus quis repellendus ut
+                        voluptatibus! Odio qui quibusdam quos?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate illum ipsa qui
+                        velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
+                        quasi, veniam veritatis voluptas.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
+                        eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
+                        tempore ullam velit voluptates?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam labore libero! Ab,
+                        aspernatur beatae commodi cupiditate debitis dolor eum iste officia omnis quidem quisquam,
+                        repellat sed totam vitae voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda eum expedita
+                        facere fuga harum id impedit, itaque labore perferendis porro possimus quis repellendus ut
+                        voluptatibus! Odio qui quibusdam quos?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate illum ipsa qui
+                        velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
+                        quasi, veniam veritatis voluptas.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
+                        eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
+                        tempore ullam velit voluptates?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam labore libero! Ab,
+                        aspernatur beatae commodi cupiditate debitis dolor eum iste officia omnis quidem quisquam,
+                        repellat sed totam vitae voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda eum expedita
+                        facere fuga harum id impedit, itaque labore perferendis porro possimus quis repellendus ut
+                        voluptatibus! Odio qui quibusdam quos?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate illum ipsa qui
+                        velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
+                        quasi, veniam veritatis voluptas.</p>
+
                 </article>
-        </section>-->
+        </section>
     </main>
     <footer>
         <h6>Developed by IJSE</h6>
