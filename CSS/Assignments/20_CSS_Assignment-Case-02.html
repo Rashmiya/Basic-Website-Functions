@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment - Case 02 (Fixed and Sticky Position)</title>
+    <!--css reset file-->
     <link rel="stylesheet" href="../assets/css/normalize.css">
+    <!--fontAwesome icons-->
+    <link rel="stylesheet" href="../assets/fonts/css/all.min.css">
     <style>
         *{
             font-family: 'Poppins', sans-serif;
@@ -33,6 +36,7 @@
             color: #3c3a3a;
             cursor: pointer;
         }
+        
         main{
             /*paragraph eke content ekata anuwa, aside eke height eka adjust wenna one hinda  ,
             aside eke parent wena main eke position eka static nowena ekk denwa*/
@@ -51,6 +55,9 @@
             color: white;
             padding-top: 28px;
             list-style: none;
+        }
+        main>aside>ul>li>i{
+            padding-right: 18px;
         }
         main>section{
             margin-left: 290px;
@@ -82,10 +89,12 @@
         <!--Navigation side-->
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Services</li>
-                <li>Contacts</li>
-                <li>About Us</li>
+                <!--if we want to load a website, When click a icon-->
+                <!--# demmama kohetawath move wenne ne-->
+                <li> <i class="fa-solid fa-house"></i> <a href="http://ijse.lk"></a>Home</li>
+                <li><i class="fa-solid fa-earth-asia"></i><a href="#"></a> Services</li>
+                <li><i class="fa-solid fa-address-book"></i><a href="#"></a> Contacts</li>
+                <li><i class="fa-solid fa-user"></i><a href="#"></a> About Us</li>
             </ul>
         </nav>
     </header>
@@ -93,10 +102,10 @@
       <!--  Side navigation Area-->
         <aside>
                 <ul>
-                    <li>Home</li>
-                    <li>Services</li>
-                    <li>Contacts</li>
-                    <li>About Us</li>
+                    <li> <i class="fa-solid fa-house"></i> Home</li>
+                    <li><i class="fa-solid fa-earth-asia"></i> Services</li>
+                    <li><i class="fa-solid fa-address-book"></i> Contacts</li>
+                    <li><i class="fa-solid fa-user"></i> About Us</li>
                 </ul>
         </aside>
 
@@ -157,7 +166,16 @@
                         voluptatibus! Odio qui quibusdam quos?</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate illum ipsa qui
                         velit. Accusamus alias animi at dolor facilis illo labore, laboriosam perspiciatis porro quae,
-                        quasi, veniam veritatis voluptas.</p>
+                        quasi, veniam veritatis voluptas.<b>Rashmiya</b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet asperiores aut cum eaque
+                        eveniet exercitationem hic ipsam minima modi numquam quod recusandae sapiente, sit suscipit
+                        tempore ullam velit voluptates?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit ipsam labore libero! Ab,
+                        aspernatur beatae commodi cupiditate debitis dolor eum iste officia omnis quidem quisquam,
+                        repellat sed totam vitae voluptatibus?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur assumenda eum expedita
+                        facere fuga harum id impedit, itaque labore perferendis porro possimus quis repellendus ut
+                        voluptatibus! Odio qui quibusdam quos?<b>Risni</b></p>
 
                 </article>
         </section>
