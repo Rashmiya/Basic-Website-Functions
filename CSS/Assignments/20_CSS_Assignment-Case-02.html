@@ -12,12 +12,14 @@
             font-family: 'Poppins', sans-serif;
         }
         body>header{
-            position: relative;
+            position: fixed;
             width: 100vw;
             height: 60px;
             border: 1px solid gray;
             background-color: white;
             box-shadow: 1px 1.3px 3px 2px #403e3e;  /*  right side eke shadow area eka- shadow eka yatata withrk kochchrk penna oneda kiyn eka- wateta apply wena area eka(opacity)- watetama apply wena width height eka - color*/
+            z-index: 2;
+            top: 0;
         }
         header>img{
             position: relative;
@@ -41,6 +43,7 @@
             /*paragraph eke content ekata anuwa, aside eke height eka adjust wenna one hinda  ,
             aside eke parent wena main eke position eka static nowena ekk denwa*/
             position: relative;
+            margin-top: 60px;
         }
         main>aside{
             position: absolute;
@@ -79,6 +82,8 @@
             margin-top: 0;
             text-align: center;
             padding: 18px;
+            font-weight: lighter;
+            color: white;
         }
     </style>
 </head>
@@ -91,10 +96,10 @@
             <ul>
                 <!--if we want to load a website, When click a icon-->
                 <!--# demmama kohetawath move wenne ne-->
-                <li> <i class="fa-solid fa-house"></i> <a href="http://ijse.lk"></a>Home</li>
-                <li><i class="fa-solid fa-earth-asia"></i><a href="#"></a> Services</li>
-                <li><i class="fa-solid fa-address-book"></i><a href="#"></a> Contacts</li>
-                <li><i class="fa-solid fa-user"></i><a href="#"></a> About Us</li>
+                <li> <i class="fa-solid fa-house"></i> <!--<a href="http://ijse.lk"></a>-->Home</li>
+                <li><i class="fa-solid fa-earth-asia"></i><!--<a href="#"></a>--> Services</li>
+                <li><i class="fa-solid fa-address-book"></i><!--<a href="#"></a>--> Contacts</li>
+                <li><i class="fa-solid fa-user"></i><!--<a href="#"></a>--> About Us</li>
             </ul>
         </nav>
     </header>
