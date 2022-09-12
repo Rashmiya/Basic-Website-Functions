@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css Grid Layout</title>
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <style>
+    body>section{
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: repeat(3,1fr);
+      grid-template-columns: repeat(4,1fr);
+      column-gap: 5px;
+      row-gap: 8px;
+    }
+    body>section>div{
+      border: 1px solid red;
+      box-shadow: 1px 1px 3px 2px red;
+    }
+    body>section>div:nth-child(1){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(2){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(3){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(4){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(5){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(6){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(7){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(8){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(9){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(10){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(11){
+      background: url("../assets/images/natureLove-2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    body>section>div:nth-child(12){
+      background: url("../assets/images/mainGif.gif");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+</body>
+</html>
