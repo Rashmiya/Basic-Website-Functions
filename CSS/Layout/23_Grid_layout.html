@@ -10,6 +10,12 @@
         height: 500px;
         border: 2px solid red;
         display: grid;
+          /*grid-template-rows: 1fr 1fr 1fr;*/
+          grid-template-rows: 100px 100px 50px;
+         /* grid-template-columns: 1fr 1fr 1fr 1fr;*/
+          grid-template-columns: repeat(4,1fr);
+          column-gap: 10px;
+          row-gap: 10px;
       }
 
       section>div{
@@ -28,6 +34,7 @@
       <div>G</div>
       <div>H</div>
       <div>I</div>
+      <div>J</div>
     </section>
 </body>
 </html>
