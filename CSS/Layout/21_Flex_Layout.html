@@ -22,7 +22,7 @@
             height: 50px;
             border: 1px solid red;
             /*remove the compress -  get original width and height which user given*/
-            flex-shrink: 0;
+            /*flex-shrink: 0; *//*by doing this- flex items will overflow the flex-container*/
         }
        /*direction types -
                 flex-direction: column;
@@ -30,6 +30,15 @@
                 flex-direction: row-reverse;
                 flex-direction: column-reverse;
        */
+
+       /* section>div:nth-child(1){
+            background-color: red;
+            flex-grow: 1;
+        }*/
+        section>div:nth-child(2){
+            background-color: green;
+            flex-grow: 1;
+        }
     </style>
 </head>
 <body>
@@ -37,42 +46,42 @@
         <div>A</div>  <!--flex-items-->
         <div>B</div>  <!--flex-items-->
         <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
-        <div>A</div>  <!--flex-items-->
-        <div>B</div>  <!--flex-items-->
-        <div>C</div>  <!--flex-items-->
+       <!-- <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>A</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>B</div>  &lt;!&ndash;flex-items&ndash;&gt;
+        <div>C</div>  flex-items-->
     </section>
 </body>
 </html>
