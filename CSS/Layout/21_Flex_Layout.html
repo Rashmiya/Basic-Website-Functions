@@ -14,12 +14,15 @@
 
             /*flex-container X axis*/
             justify-content: space-evenly;
-            flex-wrap: wrap;
+          /*  flex-wrap: wrap;*/
+
         }
         section>div{
             width: 50px;
             height: 50px;
             border: 1px solid red;
+            /*remove the compress -  get original width and height which user given*/
+            flex-shrink: 0;
         }
        /*direction types -
                 flex-direction: column;
