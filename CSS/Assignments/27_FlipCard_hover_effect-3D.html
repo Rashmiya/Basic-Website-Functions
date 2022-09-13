@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Animation - 3D Flip Card Hover Effect</title>
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+            font-family: sans-serif;
+        }
+
+        .container{
+            max-width: 1000px;
+            margin: 100px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card{
+            position: relative;
+            margin: 20px 0;
+            width: 300px;
+            height: 400px;
+            background: #ffffff;
+            transform-style: preserve-3d;
+            transform: perspective(2000px);
+            transition: 1s;
+            box-shadow: inset 300px 0 50px rgba(0,0,0,0.5);
+        }
+
+        .card:hover{
+            z-index: 1000;
+            transform: perspective(2000px) rotate(-10deg);
+            box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+        }
+        .card>.image-box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            transform-origin: left;
+            z-index: 1;
+            transition: 1s;
+        }
+
+        .card:hover>.image-box{
+            transform: rotateY(-120deg);
+        }
+
+        .card>.image-box>img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .container>.card> .image-box>img{
+            width: 300px;
+            height: 400px;
+        }
+        .card .details{
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+  </style>
+</head>
+<body>
+    <section class="container">
+        <!--first Assignment-->
+      <div class="card">
+        <div class="image-box">
+          <img src="../assets/images/case_1.png" alt="CSS-Assignment-Case_01">
+        </div>
+        <div class="details">
+          <h2>Lorem ipsum dolor</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur modi odit pariatur! Alias aperiam
+            corporis ea. Adipisci deserunt odio reprehenderit sequi sunt. Delectus non porro, possimus tempora vel vero
+            voluptatum.</p>
+        </div>
+      </div>
+
+        <!--second Assignment-->
+        <div class="card">
+            <div class="image-box">
+                <img src="../assets/images/case_8.png" alt="Circle Border Transition">
+            </div>
+            <div class="details">
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur modi odit pariatur! Alias aperiam
+                    corporis ea. Adipisci deserunt odio reprehenderit sequi sunt. Delectus non porro, possimus tempora vel vero
+                    voluptatum.</p>
+            </div>
+        </div>
+
+        <!--third Assignment-->
+        <div class="card">
+            <div class="image-box">
+                <img src="../assets/images/case_11-carAnimation.png" alt="CSS Car Animation Assignment">
+            </div>
+            <div class="details">
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur modi odit pariatur! Alias aperiam
+                    corporis ea. Adipisci deserunt odio reprehenderit sequi sunt. Delectus non porro, possimus tempora vel vero
+                    voluptatum.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
