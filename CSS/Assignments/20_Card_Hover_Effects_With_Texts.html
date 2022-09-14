@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Card Hover Effect With Text</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lato', sans-serif;;
+        }
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          /*  background: #9d9191;*/
+            background: #151724;
+            min-height: 80%;
+            width: 100%;
+        }
+        .container{
+         /*   border: 1px solid red;*/
+            position: relative;
+            width: 90%;
+            flex-wrap: wrap;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container .card{
+            max-width: 300px;
+            height: 230px;
+            position: relative;
+            background: white;
+            margin: 30px 10px;
+            padding: 20px 15px;
+
+            display: flex;
+            flex-direction: column;
+           /* box-shadow: 0 5px 202px rgba(0,0,0,0.5);*/
+            transition: 0.3s ease-in-out;
+
+            /*for glassmorphism*/
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+            border-radius: 15px;
+            background: rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.5);
+            border-left: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+           /* background: #e3dede;*/
+        }
+        .container .card:hover{
+            height: 420px;
+        }
+        .container>div:nth-child(1)>div:nth-child(1){
+            background: url("../assets/images/5.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .container>div:nth-child(2)>div:nth-child(1){
+            background: url("../assets/images/1.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .container>div:nth-child(3)>div:nth-child(1){
+            background: url("../assets/images/6.png");
+            background-size: cover;
+            background-position: center;
+        }
+        .container .card .project-imageBox{
+            position: relative;
+            width: 260px;
+            height: 260px;
+            top: -60px;
+            left: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .container .card .content{
+            position: relative;
+            margin-top: -210px;
+            padding: 10px 15px;
+            text-align: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            color: white;
+        }
+        /*.container .card .content>h2{
+            text-align: center;
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+        }*/
+        .container .card:hover .content{
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+            color: white;
+        }
+        .container .card:hover .content h2{
+           /* color: #FF9F43;*/
+            color: #F04A1E;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <section class="container">
+        <div class="card">
+            <div class="project-imageBox">
+                <!--<img src="../assets/images/5.png" alt="Supermarket-management-system">-->
+            </div>
+            <div class="content">
+                <h2>SuperMarket Management System</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aut deserunt enim et fugit
+                    mollitia odit optio, quia quibusdam sed velit. At eos incidunt inventore neque quas, quibusdam
+                    velit?</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="project-imageBox">
+               <!-- <img src="../assets/images/1.png" alt="Hotel-Reservation-system">-->
+            </div>
+            <div class="content">
+                <h2>Hotel Reservation System</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aut deserunt enim et fugit
+                    mollitia odit optio, quia quibusdam sed velit. At eos incidunt inventore neque quas, quibusdam
+                    velit?</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="project-imageBox">
+               <!-- <img src="../assets/images/6.png" alt="POS-system">-->
+            </div>
+            <div class="content">
+                <h2>POS System</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci animi aut deserunt enim et fugit
+                    mollitia odit optio, quia quibusdam sed velit. At eos incidunt inventore neque quas, quibusdam
+                    velit?</p>
+            </div>
+        </div>
+    </section>
+</section>
+</body>
+</html>
