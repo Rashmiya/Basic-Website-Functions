@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Ripped Paper Effect Using HTML and CSS</title>
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <style>
-
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body>section{
+            position: relative;
+            width: 50%;
+            height: 500px;
+            border: 1px solid red;
+        }
+        body>section>.background{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #323545;
+        }
     </style>
 </head>
 <body>
-
+    <section>
+        <div class="background"></div>
+        <div class="paper"></div>
+    </section>
 </body>
 </html>
