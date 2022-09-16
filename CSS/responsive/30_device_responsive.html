@@ -16,20 +16,22 @@
                 color: green;
             }
         }*/
-        @media all and (max-width: 375px){
+        /*Apply 0-375 range*/
+      /*  @media all and (max-width: 375px){
             h1{
                 border: 1px solid blue;
             }
             h2{
                 color: red;
             }
-        }
-        @media all and (min-width: 375px) and (max-width: 425px){
+        }*/
+        /*Apply the range between 375px to 425px*/
+        /*@media all and (min-width: 375px) and (max-width: 425px){
             h1{
                 color: orange;
                 border: 2px solid black;
             }
-        }
+        }*/
 
         /*@media all {
             h1{
@@ -42,6 +44,50 @@
             }
         }*/
 
+        /*=============practice====================*/
+        /*laptop-large*/
+        @media all and (min-width: 1024px) and (max-width: 1440px){
+            h1{
+                color: black;
+                border: 1px solid black;
+            }
+        }
+        /*laptop normal*/
+        @media all and (min-width: 768px) and (max-width: 1024px){
+            h1{
+                color: blue;
+                border: 1px solid blue;
+            }
+
+        }
+        /*tablet*/
+        @media all and (min-width: 425px) and (max-width: 768px){
+            h1{
+                color: yellow;
+                border: 1px solid yellow;
+            }
+        }
+        /*mobile large*/
+        @media all and (min-width: 375px) and (max-width: 425px){
+            h1{
+                color: orangered;
+                border: 1px solid orangered;
+            }
+        }
+        /*mobile medium*/
+        @media all and (min-width: 320px) and (max-width: 375px){
+            h1{
+                color: deeppink;
+                border: 1px solid deeppink;
+            }
+        }
+        /*0-320*/  /*mobile small*/
+        @media all and (max-width: 320px){
+            h1{
+                color: green;
+                border: 1px solid green;
+            }
+        }
     </style>
 </head>
 <body>
