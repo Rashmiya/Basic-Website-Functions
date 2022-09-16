@@ -8,20 +8,26 @@
         h1{
             color: red;
         }
-        @media all and (max-width: 425px){
+       /* @media all and (max-width: 425px){
             h1{
                 border: 1px solid red;
             }
             h2{
                 color: green;
             }
-        }
+        }*/
         @media all and (max-width: 375px){
             h1{
                 border: 1px solid blue;
             }
             h2{
                 color: red;
+            }
+        }
+        @media all and (min-width: 375px) and (max-width: 425px){
+            h1{
+                color: orange;
+                border: 2px solid black;
             }
         }
 
