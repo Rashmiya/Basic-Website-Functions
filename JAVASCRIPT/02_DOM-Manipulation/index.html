@@ -23,11 +23,23 @@
 
   <script>
 <!--By using following methods we can select DOM elements to be changed-->
-    document.getElementById("");    // we can select unique element by ID selector  ---return one element
+   /* document.getElementById("");    // we can select unique element by ID selector  ---return one element
     document.getElementsByClassName("");  // can select elements by using class selector-- return HTML collection
     document.getElementsByName("");  // select elements by element name attribute value -- return Node collection
     document.getElementsByTagName("");  // select elements by element name(Type selector) -- return HTML collection
-    document.querySelector("");    // select only one element from the machings, can use CSS selectors.
+    document.querySelector("");*/    // select only one element from the machings, can use CSS selectors.
+
+  /*to remove element*/
+  document.getElementById("h2ID").remove();
+
+  /*getting text*/
+  document.getElementsByClassName("Heading")[0].innerText;
+
+  /*to change the text*/
+  document.getElementsByClassName("Heading")[0].innerText="Text changed";
+
+  /*to change styles*/
+  document.getElementsByName("a")[0].style.color="red";
 
   </script>
 </body>
