@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Manipulation</title>
+  <style>
+    img{
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
   <h1 class="Heading">Hello Java Script</h1>
@@ -11,6 +16,7 @@
   <h2 id="h2ID">What is a DOM?</h2>
   <h3 name="a">  Institute of Software Engineering</h3>
 
+  <img src="" alt="image">
   <input name="b" placeholder="input something" type="text">
 
   <ul>
@@ -40,6 +46,28 @@
 
   /*to change styles*/
   document.getElementsByName("a")[0].style.color="red";
+
+/*Question - input field eke mokakhri link ekak dunnama, ekata adaala source eka image ekata wetenna one*/
+
+  /*how to get and set src attribute values*/
+  /*getAttribute(param1);
+  * setAttribute(param1,param2);*/
+
+  /*how to set and get a value from a textfield*/
+  /*document.querySelector("input").value="C001"*/  /*set value*/
+  /*document.querySelector("input").value*/   /*get Value*/
+
+  /*How to write an event for a button*/
+  /*document.querySelector("button").addEventListener("click",function(){
+    alert("How are You?");  // methna tham abutton eka click kalaham wenna one de liynne
+    });
+  */
+
+/*The Answer*/
+document.querySelector("button").addEventListener("click",function(){
+  document.querySelector("img").setAttribute("src",document.querySelector("input").value);
+});
+
 
   </script>
 </body>
