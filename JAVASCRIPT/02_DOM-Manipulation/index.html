@@ -6,10 +6,35 @@
   <style>
     img{
       border: 1px solid black;
+      width: 200px;
+      height: 200px;
+    }
+    body>img:nth-child(1){
+        width: 150px;
+        height: 150px;
+        border: 1px solid red;
+    }
+    body>img:nth-child(2){
+        width: 150px;
+        height: 150px;
+        border: 1px solid red;
+    }
+    body>img:nth-child(3){
+        width: 150px;
+        height: 150px;
+        border: 1px solid red;
     }
   </style>
 </head>
 <body>
+    <img src="../assets/images/mainGif.gif" alt="First Image" id="imageOne">
+    <img src="../assets/images/natureLove-2.jpg" alt="Second Image" id="imageTwo">
+    <img src="../assets/images/ripped-paper-background-image.jpg" alt="imageThree" id="imageThree">
+    <br>
+    <button id="btnOne">Image One</button>
+    <button id="btnTwo">Image Two</button>
+    <button id="btnThree">Image Three</button>
+
   <h1 class="Heading">Hello Java Script</h1>
   <h1 class="Heading">Hello Java </h1>
   <h1 class="Heading">Hello JVM</h1>
@@ -18,6 +43,7 @@
 
   <img src="" alt="image">
   <input name="b" placeholder="input something" type="text">
+  <input id="inputType" placeholder="input something" type="text">
 
   <ul>
     <li>GDSE</li>
@@ -50,8 +76,8 @@
 /*Question - input field eke mokakhri link ekak dunnama, ekata adaala source eka image ekata wetenna one*/
 
   /*how to get and set src attribute values*/
-  /*getAttribute(param1);
-  * setAttribute(param1,param2);*/
+  /*getAttribute(param1);   // get Value
+  * setAttribute(param1,param2);   // set Value*/
 
   /*how to set and get a value from a textfield*/
   /*document.querySelector("input").value="C001"*/  /*set value*/
@@ -63,11 +89,63 @@
     });
   */
 
-/*The Answer*/
-document.querySelector("button").addEventListener("click",function(){
+/*Question 01 - Answer*/
+/*document.querySelector("button").addEventListener("click",function(){
   document.querySelector("img").setAttribute("src",document.querySelector("input").value);
+});*/
+
+/*Question 02 - input field ekaka type krna value eka ape document eke display wenna one*/
+  /*document.querySelector("#inputType").addEventListener("keyup",function (){
+    console.log(document.querySelector("input").value);
+   /!* document.setAttribute("h1", document.querySelector("input").value);*!/
+  });*/
+
+/*Question 02 - Answer*/
+document.querySelector("#inputType").addEventListener("keyup",function (){
+  document.querySelector("h1").innerText=document.querySelector("#inputType").value;
 });
 
+/*Question 03 - Image hidden case*/
+/*when button one is clicked, image one sholud hide and rest of images should be displayed*/
+/*when button 2 is clecked, image two should hide and rest of images should be displayed*/
+/*when button 3 is clicked, image three should hide and rest of images should be displayed*/
+
+/*Question 03 - Answer*/
+        /*method-01*/
+/*document.querySelector("#btnOne").addEventListener("click",function(){
+    document.querySelector("#imageOne").style.visibility="hidden";
+    document.querySelector("#imageTwo").style.visibility="visible";
+    document.querySelector("#imageThree").style.visibility="visible";
+});
+
+document.querySelector("#btnTwo").addEventListener("click",function(){
+    document.querySelector("#imageOne").style.visibility="visible";
+    document.querySelector("#imageTwo").style.visibility="hidden";
+    document.querySelector("#imageThree").style.visibility="visible";
+});
+
+document.querySelector("#btnThree").addEventListener("click",function(){
+    document.querySelector("#imageOne").style.visibility="visible";
+    document.querySelector("#imageTwo").style.visibility="visible";
+    document.querySelector("#imageThree").style.visibility="hidden";
+});*/
+
+        /*method-02*/
+document.querySelector("#btnOne").addEventListener("click",function(){
+    document.querySelector("#imageOne").style.display="none";
+    document.querySelector("#imageTwo").style.display="inline-block";
+    document.querySelector("#imageThree").style.display="inline-block";
+});
+document.querySelector("#btnTwo").addEventListener("click",function() {
+    document.querySelector("#imageOne").style.display = "inline-block";
+    document.querySelector("#imageTwo").style.display = "none";
+    document.querySelector("#imageThree").style.display = "inline-block";
+});
+document.querySelector("#btnThree").addEventListener("click",function() {
+    document.querySelector("#imageOne").style.display = "inline-block";
+    document.querySelector("#imageTwo").style.display = "inline-block";
+    document.querySelector("#imageThree").style.display = "none";
+});
 
   </script>
 </body>
