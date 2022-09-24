@@ -29,10 +29,11 @@
     <script>
         /*how to add elements for append and prepend*/
         $("#upBtn").click(function(){
-            $("ul").prepend($("#textField").val());
+            $("ul").prepend('<li>'+$("#textField").val()+'</li>');
         });
+        /*should use String concate*/
         $("#downBtn").click(function(){
-            $("ul").append($("#textField").val());
+            $("ul").append('<li>'+$("#textField").val()+'</li>');
         });
 
         // document.querySelector("h1").style.color="red";   -- JS way
