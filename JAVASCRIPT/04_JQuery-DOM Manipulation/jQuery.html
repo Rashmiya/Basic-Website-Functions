@@ -8,7 +8,7 @@
     <h1>jQuery..</h1>
     <h1>Hello</h1>
     <h2>what is jQuery? and How it is work?</h2>
-    <p>Hai rashmiya</p>
+    <p id="firstPara">Hai rashmiya</p>
     <p class="paraClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi explicabo impedit ipsa ipsam numquam
         perferendis! Culpa dolores ea eos est hic, nemo quaerat quisquam quos recusandae repellendus tempora ullam,
         veniam!</p>
@@ -21,6 +21,8 @@
         <li>IJSE</li>
         <li id="list1">RWAD</li>
     </ul>
+    <img src="" alt="IJSE" width="400px">
+    
     <script src="../assets/js/jquery-3.6.1.min.js"></script>  <!--import the jQuery plugin-->
     <script>
         // document.querySelector("h1").style.color="red";   -- JS way
@@ -32,10 +34,36 @@
         $("[id]").css("border","2px solid red");*/
 
         /*css combinators*/
-        $("body>h1").css("color","red");    // child combinator
+       /* $("body>h1").css("color","red");    // child combinator
         $("body p").css("border","1px solid blue"); //decended combinator
         $("h2+p").css("font-size","40px");   // adjacent combinator
-        $("h1~p").css("color","chocolate"); // general siblings combinator
+        $("h1~p").css("color","chocolate"); */// general siblings combinator
+
+        /*to remove*/
+        /*$("h1").remove();*/
+
+        /*get innerText*/
+        /*$("#firstPara").text();*/
+
+        /*how to set text to the element*/
+        $("#firstPara").text("We set the para");
+
+        /*how to get values from the textField*/
+        $("#inputType").val();
+
+        /*how to set values for the textField*/
+        $("#inputType").val("Big Brain");
+
+        /*set attribute value*/
+        $("img").attr("src", "");
+
+        /*get attribute value*/
+        $("img").attr("src");
+
+        /*how to write an event for a button*/
+        $("button").click(function(){
+            alert("How are You?");
+        });
     </script>
 </body>
 </html>
