@@ -41,8 +41,8 @@
 <h2 id="h2ID">What is a DOM?</h2>
 <h3 name="a">  Institute of Software Engineering</h3>
 
-<img src="" alt="image">
-<input name="b" placeholder="input something" type="text">
+<img id="mainImage" src="" alt="image">
+<input id="b" placeholder="input something" type="text">
 <input id="inputType" placeholder="input something" type="text">
 
 <ul>
@@ -53,7 +53,85 @@
 </ul>
 <button>Sample</button>
 
+<script src="../assets/js/jquery-3.6.1.min.js"></script>  <!--import the jQuery plugin-->
 <script>
+    /*to remove element*/
+    $("#h2ID").remove();
+  /* document.getElementById("h2ID").remove();*/
+
+    /*getting text*/
+    $(".Heading").eq(0).text();
+  /* document.getElementsByClassName("Heading")[0].innerText;*/
+
+    /*to change the text*/
+    $(".Heading").eq(0).text("Text changed");
+    /*document.getElementsByClassName("Heading")[0].innerText="Text changed";*/
+
+    /*to change styles*/
+    $("#b").css("color", "red");
+    /*document.getElementById("b")[0].style.color="red";*/
+
+
+    /*Question 01- input field eke mokakhri link ekak dunnama, ekata adaala source eka image ekata wetenna one*/
+
+             /*Question 01 - Answer(JQuery)*/
+    $("button").click(function(){
+        $("#mainImage").attr("src",$("#b").val());
+    });
+             /*Question 01 - Answer(js)*/
+    /*document.querySelector("button").addEventListener("click",function(){
+      document.querySelector("img").setAttribute("src",document.querySelector("input").value);
+    });*/
+
+
+    /*Question 02 - input field ekaka type krna value eka ape document eke display wenna one*/
+            /*Question 02 - Answer (jQuery)*/
+    $("#inputType").keyup(function(){
+        $("h1").text($("#inputType").val());
+    });
+            /*Question 02 - Answer (js)*/
+  /*  document.querySelector("#inputType").addEventListener("keyup",function (){
+        document.querySelector("h1").innerText=document.querySelector("#inputType").value;
+    });*/
+
+
+            /*Question 03 - Image hidden case*/
+    /*when button one is clicked, image one sholud hide and rest of images should be displayed*/
+    /*when button 2 is clecked, image two should hide and rest of images should be displayed*/
+    /*when button 3 is clicked, image three should hide and rest of images should be displayed*/
+
+            /*Question 03 - Answer (jQuery)*/
+    $("#btnOne").click(function(){
+        $("#imageOne").css("display","none");
+        $("#imageTwo").css("display","inline-block");
+        $("#imageThree").css("display","inline-block");
+    });
+    $("#btnTwo").click(function(){
+        $("#imageOne").css("display","inline-block");
+        $("#imageTwo").css("display","none");
+        $("#imageThree").css("display","inline-block");
+    });
+    $("#btnThree").click(function(){
+        $("#imageOne").css("display","inline-block");
+        $("#imageTwo").css("display","inline-block");
+        $("#imageThree").css("display","none");
+    });
+            /*Question 03 - Answer (js)*/
+    /*  document.querySelector("#btnOne").addEventListener("click",function(){
+        document.querySelector("#imageOne").style.display="none";
+         document.querySelector("#imageTwo").style.display="inline-block";
+         document.querySelector("#imageThree").style.display="inline-block";
+     });
+     document.querySelector("#btnTwo").addEventListener("click",function() {
+         document.querySelector("#imageOne").style.display = "inline-block";
+         document.querySelector("#imageTwo").style.display = "none";
+         document.querySelector("#imageThree").style.display = "inline-block";
+     });
+     document.querySelector("#btnThree").addEventListener("click",function() {
+         document.querySelector("#imageOne").style.display = "inline-block";
+         document.querySelector("#imageTwo").style.display = "inline-block";
+         document.querySelector("#imageThree").style.display = "none";
+     });*/
 
 </script>
 </body>
