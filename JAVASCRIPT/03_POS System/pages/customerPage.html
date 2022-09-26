@@ -82,14 +82,39 @@
 <script src="../../assets/js/jquery-3.6.1.min.js"></script>   <!--import the jQuery-->
 <script>
     $("#btnCustomer").click(function (){
-      alert( $("#txtCustomerID").val());
+
+      /*select each text fields and their values*/
+      let customerID =  $("#txtCustomerID").val();
+      let customerName = $("#txtCustomerName").val();
+      let customerAddress = $("#txtCustomerAddress").val();
+      let customerSalary = $("#txtCustomerSalary").val();
+
+      var customer={
+        id : customerID,
+        name : customerName,
+        address : customerAddress,
+        salary : customerSalary
+      }
+     /* alert(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);*/
+      console.log(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);
     });
 
     /*select each text fields and their values*/
-   let customerID =  $("#txtCustomerID").val();
+ /*  let customerID =  $("#txtCustomerID").val();
    let customerName = $("#txtCustomerName").val();
    let customerAddress = $("#txtCustomerAddress").val();
-   let customerSalary = $("#txtCustomerSalary").val();
+   let customerSalary = $("#txtCustomerSalary").val();*/
+
+    /*create a literal base object*/
+  /*  var customer = {
+      id:"C001",
+      name:"Rashmiya",
+      address:"colombo",
+      salary:25000
+    }*/
+    /*how to access values in a object*/
+   /* customer.id;
+    customer.name;*/
 </script>
 
 </body>

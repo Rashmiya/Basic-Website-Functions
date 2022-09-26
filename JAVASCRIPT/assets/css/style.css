@@ -4,6 +4,10 @@
 *{
     font-family: 'Titillium Web', sans-serif;
 }
+.row{
+    margin-top: 45px;
+    margin-left: calc(1.5 * var(--bs-gutter-x));
+}
 #title-text{
     color: #1b5e20;
     font-size: 2em;
