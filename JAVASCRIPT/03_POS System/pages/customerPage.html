@@ -55,7 +55,7 @@
         <button class="btn btn-primary" id="btnCustomer">Save Customer</button>
         <button class="btn btn-danger" id="btnCusDelete">Remove</button>
         <button class="btn btn-warning" id="btnUpdate">Update</button>
-        <button class="btn btn-success">Get All</button>
+        <button class="btn btn-success" id="btnGetAll">Get All</button>
         <button class="btn btn-danger" id="btn-clear1">Clear All</button>
       </div>
 
@@ -85,6 +85,7 @@
   /*create an array*/
   var customerArray=[];
 
+  /*when click save customer button*/
     $("#btnCustomer").click(function (){
 
       /*select each text fields and their values*/
@@ -109,6 +110,22 @@
       console.log(customerArray);
     });
 
+  /*when click getAll button*/
+  $("#btnGetAll").click(function(){
+    /*load all customer details into table*/
+    for (var i = 0; i < customerArray.length; i++) {
+      var row = '<tr><td>'+customerArray[i].id+'</td><td>'+customerArray[i].name+'</td><td>'+customerArray[i].address+'</td><td>'+customerArray[i].salary+'</td></tr>';
+      $("#tblCustomer").append(row);
+    }
+    /*method 01*/
+    /*for (var i = 0; i < customerArray.length; i++) {
+      console.log(customerArray[i].id); // get ID values only
+    }*/
+    /*method 02*/
+    /*for (var i of customerArray) {
+      console.log(i.id);  // get ID values only
+    }*/
+  });
 
     /*get all values in a array using for loop*/
 /* var arrayOfAges = [10,20,55,65,45,90,100,35];
