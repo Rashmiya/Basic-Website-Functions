@@ -81,6 +81,10 @@
 
 <script src="../../assets/js/jquery-3.6.1.min.js"></script>   <!--import the jQuery-->
 <script>
+
+  /*create an array*/
+  var customerArray=[];
+
     $("#btnCustomer").click(function (){
 
       /*select each text fields and their values*/
@@ -89,6 +93,7 @@
       let customerAddress = $("#txtCustomerAddress").val();
       let customerSalary = $("#txtCustomerSalary").val();
 
+      /*create customer object*/
       var customer={
         id : customerID,
         name : customerName,
@@ -96,8 +101,35 @@
         salary : customerSalary
       }
      /* alert(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);*/
-      console.log(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);
+      console.log(customer);
+
+      /*push object value into array */
+      customerArray.push(customer);
+
+      console.log(customerArray);
     });
+
+
+    /*get all values in a array using for loop*/
+/* var arrayOfAges = [10,20,55,65,45,90,100,35];
+
+  for (var i = 0; i < arrayOfAges.length; i++) {
+    console.log(arrayOfAges[i]);
+  }*/
+    /*how to access values in a array*/
+  /*0-['C001','Nimal','colombo','30000']
+  * 1-['C002','Rashmiya','Nugegoda','50000']
+  * 2-['C003','Risni','Panadura','30000']*/
+
+  /*first put each into a new variable*/
+  /*var customerOne = customerArray[0];*/
+
+  /*then access by that variable*/
+/*
+  customerOne.id;   //C001
+  customerOne.name;  // Nimal
+  customerOne.salary;  // 30000
+*/
 
     /*select each text fields and their values*/
  /*  let customerID =  $("#txtCustomerID").val();
