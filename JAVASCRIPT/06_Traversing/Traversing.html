@@ -16,7 +16,55 @@
       <div>
           <h1>Hello there, How are you?</h1>
       </div>
+      <div>
+          <div>
+              <section>
+                  <div>
+                      <ol>
+                          <li>1</li>
+                          <li>2</li>
+                          <li>3</li>
+                      </ol>
+                      <ul>
+                          <li>GDSE</li>
+                          <li>CMJD</li>
+                          <li>IJSE</li>
+                      </ul>
+                  </div>
+              </section>
+          </div>
+          <h1 id="d"> Hello there How Are You?</h1>
+      </div>
   </section>
 </section>
+
+  <script src="../assets/js/jquery-3.6.1.min.js"></script>   <!--import jQuery-->
+  <script>
+        /*children();
+        * children(":nth-child(1)");
+        * children(":eq(1)");
+        * .eq("1");
+        * get();
+        * find();
+        * parent();
+        * parents();*/
+
+
+        // Exercise 01- catch h1 element and change font color to red.
+        // 01- catch section inside the body
+        $("body").children(':eq(1)');
+
+        // 02 - catch first element inside the section element
+        $("body").children(':eq(1)').children(":nth-child(1)");
+
+        //03- catch the div element inside the section area
+        $("body").children(':eq(1)').children(":nth-child(1)").children().eq("0");
+
+        //04 - catch h1 element inside the div area
+        $("body").children(':eq(1)').children(":nth-child(1)").children().eq("0").children(":nth-child(1)");
+
+        //05 - change the font color in h1 element
+        $("body").children(':eq(1)').children(":nth-child(1)").children().eq("0").children(":nth-child(1)").css('color','red');
+  </script>
 </body>
 </html>
