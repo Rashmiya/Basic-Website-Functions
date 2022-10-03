@@ -111,6 +111,9 @@
 
       /*load data into table*/
       loadAllCustomers();
+
+      //bind click event for added rows
+      bindRowClickEvents();
     });
 
   function loadAllCustomers(){
@@ -164,8 +167,23 @@
   // });
 
   // So we don't want entire row text we want only segregated data
+  /*when click table row*/
 
+  function bindRowClickEvents(){
+    $("#tblCustomer>tr").click(function(){
+      /*get each texts separately from clicked table row-using traversing*/
+      let id = $(this).children().eq(0).text();
+      let name = $(this).children().eq(1).text();
+      let address = $(this).children().eq(2).text();
+      let salary = $(this).children().eq(3).text();
 
+      /*set table values to textFields*/
+      $("#txtCustomerID").val(id);
+      $("#txtCustomerName").val(name);
+      $("#txtCustomerAddress").val(address);
+      $("#txtCustomerSalary").val(salary);
+    });
+  }
 
 
 
