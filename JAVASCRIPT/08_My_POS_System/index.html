@@ -14,11 +14,119 @@
   <meta name="owner" content="Rashmiya Rafeek">
   <meta name="theme-color" content="#1F2234">
   <style>
+      main>#left-side>#logo-image{
+        top: 10px;
+        height: 207px;
+        position: relative;
+        left: 30px;
+        border-right: 2.5px solid #F0CB9E;
+      }
+      main>#left-side{
+        border: 1px solid red;
+        height: 100vh;
+        width: 54vh;
+        position: absolute;
+      }
+      main>#right-side{
+        border: 1px solid blue;
+        position: absolute;
+        left: 54vh;
+      }
+
+      main>#left-side>#nav-links{
+        position: absolute;
+        top: 281px;
+        left: 22px;
+        height: 280px;
+        width: 255px;
+      }
+
+      #nav-links>#Home #homeIcon, #nav-links>#Customers #customerIcon, #nav-links>#Items #itemIcon,#nav-links>#Invoices #orderIcon{
+        position: relative;
+      }
+      #nav-links>#Home #homeIcon, #nav-links>#Customers #customerIcon, #nav-links>#Items #itemIcon {
+        left: 4px;
+      }
+
+      #nav-links>#Invoices #text4,#nav-links>#Items #text3,#nav-links>#Customers #text2, #nav-links>#Home #text1{
+        text-align: end;
+        justify-content: space-evenly;
+        display: flex;
+        width: 100%;
+        color: #572C24;
+        font-family: revert;
+      }
+      #nav-links>#Home #text1 {
+        width: 78%;
+        font-weight: bold;
+      }
+      #nav-links>#Items #text3{
+        width: 70%;
+      }
+      #nav-links>#Invoices #text4{
+        width: 84%;
+      }
+      #nav-links>#Home, #nav-links>#Customers,#nav-links>#Items,#nav-links>#Invoices{
+        height: 75px;
+      }
+
 
   </style>
 </head>
 <body>
+<main>
+<!-- left side-->
+  <section id="left-side">
+      <img id="logo-image" src="../assets/images/posImages/R-logo.png" class="rounded float-start" alt="Rashmiya Logo">
 
+      <!-- for navigation links-->
+    <div id="nav-links">
+     <!-- <h1>Nav Area</h1>-->
+      <nav  id="Home" class="navbar">
+        <div class="container-fluid">
+          <a  id="text1"class="navbar-brand" href="index.html">
+            <img id="homeIcon" src="../assets/images/posImages/home-brown.png" alt="Home Icon" width="30" height="30" class="d-inline-block align-text-top">
+             Home
+          </a>
+        </div>
+      </nav>
+
+      <nav  id="Customers" class="navbar">
+        <div class="container-fluid">
+          <a id="text2"class="navbar-brand" href="pages/customerForm.html">
+            <img id="customerIcon" src="../assets/images/posImages/user-brown.png" alt="Customer Icon" width="32" height="32" class="d-inline-block align-text-top">
+            Customers
+          </a>
+        </div>
+      </nav>
+
+      <nav  id="Items" class="navbar">
+        <div class="container-fluid">
+          <a id="text3" class="navbar-brand" href="pages/itemForm.html">
+            <img id="itemIcon" src="../assets/images/posImages/items-Brown.png" alt="Item Icon" width="48" height="50" class="d-inline-block align-text-top">
+            Items
+          </a>
+        </div>
+      </nav>
+
+      <nav  id="Invoices" class="navbar">
+        <div class="container-fluid">
+          <a id="text4" class="navbar-brand" href="pages/OrderForm.html">
+            <img id="orderIcon" src="../assets/images/posImages/order-brown.png" alt="Order Icon" width="32" height="34" class="d-inline-block align-text-top">
+            Invoices
+          </a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+<!--right side-->
+  <section id="right-side">
+    <div>
+      <h1>Rashmiya POS System</h1>
+    </div>
+  </section>
+</main>
 <!--import bootstrap js-->
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
