@@ -114,6 +114,9 @@
 
       //bind click event for added rows
       bindRowClickEvents();
+
+      // bind doubleClick event for delete a row from the table
+      deleteRowDetails();
     });
 
   function loadAllCustomers(){
@@ -185,7 +188,12 @@
     });
   }
 
-
+  /* when double click the row of the table -  should delete that row from the table*/
+  function deleteRowDetails(){
+  $("#tblCustomer>tr").on('dblclick',function(){
+    alert("Do you want to delete? You can't reverse it ");
+  });
+}
 
 
   /*when click clearAll button*/

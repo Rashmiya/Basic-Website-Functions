@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bind javaScript events into jQuery</title>
+    <style>
+        h1{
+            width: 187px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id="btnSave">Save Customer</h1>
+    </section>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script>
+        // standard way to write js Event with jQuery
+        $("#btnSave").on('click',function(){
+            alert("Customer Saved Successfully");
+            console.log("Hai");
+        });
+
+        // how to detach (off) events after binding
+        $("#btnSave").off('click');
+
+        $("#btnSave").on('dblclick',function(){
+            alert("customer updated");
+        });
+    </script>
+</body>
+</html>
