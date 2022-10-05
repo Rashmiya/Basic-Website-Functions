@@ -13,6 +13,12 @@
   <meta name="author" content="Rashmiya Rafeek">
   <meta name="owner" content="Rashmiya Rafeek">
   <meta name="theme-color" content="#1F2234">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ledger&display=swap" rel="stylesheet">
   <style>
       main>#left-side>#logo-image{
         top: 10px;
@@ -22,15 +28,15 @@
         border-right: 2.5px solid #F0CB9E;
       }
       main>#left-side{
-        border: 1px solid red;
         height: 100vh;
-        width: 54vh;
+        width: 50vh;
         position: absolute;
       }
       main>#right-side{
-        border: 1px solid blue;
         position: absolute;
-        left: 54vh;
+        left: 50vh;
+        height: 100vh;
+        width: 74vw;
       }
 
       main>#left-side>#nav-links{
@@ -69,8 +75,93 @@
       #nav-links>#Home, #nav-links>#Customers,#nav-links>#Items,#nav-links>#Invoices{
         height: 75px;
       }
-
-
+      #right-side #title-area{
+          color:  #572C24;
+          position: relative;
+          top: 20px;
+      }
+      #right-side #title-area>h1{
+          font-family: 'Ledger', serif;
+          position: relative;
+          padding-left: 149px;
+          margin-bottom: 0;
+          margin-top: 10px;
+          font-size: 2em;
+      }
+     #right-side #center-image{
+         position: relative;
+         top: 36px;
+         width: 885px;
+         height: 465px;
+         background: url("../assets/images/posImages/vegetables.jpg");
+         background-size: cover;
+         background-position: center;
+         border: 6px solid #C89B63;
+         box-shadow: 6px 7px 4px 3px #e3cdb1;
+     }
+     #orderDetailsImage{
+         position: absolute;
+         right: 23px;
+         bottom: 44px;
+         width: 117px;
+         height: 123px;
+     }
+     #orderDetailsImage>img{
+         width: 117px;
+         height: 123px;
+     }
+     #orderImage{
+         position: absolute;
+         right: 24px;
+         top: 20px;
+         width: 150px;
+         height: 155px;
+     }
+     #orderImage>img{
+         position: absolute;
+         right: -3px;
+         top: -6px;
+         width: 150px;
+         height: 155px;
+     }
+     #itemImage{
+         position: absolute;
+         width: 150px;
+         height: 155px;
+         left: 27px;
+         bottom: 37px;
+     }
+     #itemImage>img{
+         position: absolute;
+         width: 140px;
+         height: 145px;
+         bottom: 0;
+     }
+     #customerImage{
+         position: absolute;
+         width: 144px;
+         height: 150px;
+         top: 38px;
+         left: 34px;
+     }
+     #customerImage>img{
+         width: 144px;
+         height: 150px;
+     }
+      main>#right-side>div:nth-child(2){
+          position: relative;
+          top: 20px;
+          height: 32px;
+      }
+     #right-side>div:nth-child(2)>h2{
+         color: #BD8F31;
+         font-style: italic;
+         text-align: center;
+         font-size: 1.3em;
+         font-family: 'Lemonada', cursive;
+         font-weight: bold;
+         margin-top: 16px;
+     }
   </style>
 </head>
 <body>
@@ -122,8 +213,26 @@
 
 <!--right side-->
   <section id="right-side">
-    <div>
+    <div id="title-area">
       <h1>Rashmiya POS System</h1>
+        <!--link date and time-->
+    </div>
+    <div>
+          <h2>all products in one place</h2>
+      </div>
+    <div id="center-image">
+        <div id="customerImage">
+            <img src="../assets/images/posImages/user-BrownColor.png" class="img-fluid" alt="Customer Image">
+        </div>
+        <div id="orderImage">
+            <img src="../assets/images/posImages/order-BrownColor.png" class="img-fluid" alt="...">
+        </div>
+        <div id="itemImage">
+            <img src="../assets/images/posImages/item-Brown.png" class="img-fluid" alt="...">
+        </div>
+        <div id="orderDetailsImage">
+            <img src="../assets/images/posImages/orderDetails.png" class="img-fluid" alt="...">
+        </div>
     </div>
   </section>
 </main>
