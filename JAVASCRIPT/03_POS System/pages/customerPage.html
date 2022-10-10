@@ -191,7 +191,9 @@
   /* when double click the row of the table -  should delete that row from the table*/
   function deleteRowDetails(){
   $("#tblCustomer>tr").on('dblclick',function(){
-    alert("Do you want to delete? You can't reverse it ");
+    $(this).children().remove();
+  /*  $("#tblCustomer>tr").remove();*/
+    /*alert("Do you want to delete? You can't reverse it ");*/
   });
 }
 
