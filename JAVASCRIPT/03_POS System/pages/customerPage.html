@@ -109,9 +109,17 @@
   });
 
   // bind event object for keyDown when press the Enter key
-  $("#txtCustomerID").on('keydown',function(event){
+  /*$("#txtCustomerID").on('keydown',function(event){
     $("#txtLastKeyElement").val(event.key);
+  });*/
+
+  // disable tab key for all textFields using grouping selector in CSS
+  $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on('keydown', function(event){
+    if(event.key === 'Tab'){
+      event.preventDefault();
+    }
   });
+
 
   $("#txtCustomerID").on('keydown',function(event){
     if(event.key === 'Enter'){
