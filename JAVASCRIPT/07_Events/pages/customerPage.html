@@ -29,7 +29,7 @@
 <main class="container-fluid" id="customerContent">
   <section class="row">
     <div class="col-4">
-      <h1>Customer Registration</h1>
+      <h1 id="heading">Customer Registration</h1>
 
       <div class="form-group">
         <label for="txtCustomerID">Customer ID</label>
@@ -144,6 +144,34 @@
       }
     });
 
+
+//mouse-event
+    $("#heading").on('mouseup', function (){
+      console.log("mouse up");
+    });
+
+    $("#heading").on('mousedown', function (){
+      console.log("mouse Down");
+    });
+    $("#heading").on('mousemove', function (){
+      console.log("mouse move");
+    });
+
+    /*move text with mouse pointer*/
+    $(window).on('mousemove', function (event){
+      console.log(event.pageX, event.pageY);
+    // method-01
+      /*$("#heading").css('top',event.pageY);
+      $("#heading").css('left',event.pageX);
+      $("#heading").css('position','absolute');*/
+
+      // method-02 -- like css object
+      $("#heading").css({
+        'top':event.pageY,
+        'left':event.pageX,
+        'position':'absolute'
+      });
+    });
 </script>
 
 </body>
