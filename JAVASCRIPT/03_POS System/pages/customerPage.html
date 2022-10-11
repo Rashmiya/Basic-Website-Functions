@@ -87,27 +87,8 @@
 
   /*when click save customer button*/
     $("#btnCustomer").click(function (){
-
-      /*select each text fields and their values*/
-      let customerID =  $("#txtCustomerID").val();
-      let customerName = $("#txtCustomerName").val();
-      let customerAddress = $("#txtCustomerAddress").val();
-      let customerSalary = $("#txtCustomerSalary").val();
-
-      /*create customer object*/
-      var customer={
-        id : customerID,
-        name : customerName,
-        address : customerAddress,
-        salary : customerSalary
-      }
-     /* alert(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);*/
-      console.log(customer);
-
-      /*push object value into array */
-      customerArray.push(customer);
-
-      console.log(customerArray);
+      /*get text Field values, create object, pass object to the array*/
+      getValues();
 
       /*load data into table*/
       loadAllCustomers();
@@ -119,16 +100,7 @@
       deleteRowDetails();
     });
 
-  function loadAllCustomers(){
-      /*remove all table body content before adding data*/
-      $("#tblCustomer").empty();
-
-      /*load all customer details into table*/
-      for (var i = 0; i < customerArray.length; i++) {
-          var row = '<tr><td>'+customerArray[i].id+'</td><td>'+customerArray[i].name+'</td><td>'+customerArray[i].address+'</td><td>'+customerArray[i].salary+'</td></tr>';
-          $("#tblCustomer").append(row);
-      }
-  }
+  $("#txtCustomerID").focus();
 
   /*when click getAll button*/
   $("#btnGetAll").click(function(){
@@ -136,6 +108,80 @@
     loadAllCustomers();
   });
 
+  // bind event object for keyDown when press the Enter key
+  $("#txtCustomerID").on('keydown',function(event){
+    $("#txtLastKeyElement").val(event.key);
+  });
+
+  $("#txtCustomerID").on('keydown',function(event){
+    if(event.key === 'Enter'){
+      $("#txtCustomerName").focus();
+    }
+  });
+  $("#txtCustomerName").on('keydown',function(event){
+    if(event.key === 'Enter'){
+      $("#txtCustomerAddress").focus();
+    }
+  });
+  $("#txtCustomerAddress").on('keydown',function(event){
+    if(event.key === 'Enter'){
+      $("#txtCustomerSalary").focus();
+    }
+  });
+  $("#txtCustomerSalary").on('keydown',function(event){
+    if(event.key === 'Enter'){
+    /* alert("You are now in last row");*/
+      getValues();
+      loadAllCustomers();
+      bindRowClickEvents();
+      deleteRowDetails();
+      clearFields();
+      $("#txtCustomerID").focus();
+    }
+  });
+
+  function getValues(){
+    /*select each text fields and their values*/
+    let customerID =  $("#txtCustomerID").val();
+    let customerName = $("#txtCustomerName").val();
+    let customerAddress = $("#txtCustomerAddress").val();
+    let customerSalary = $("#txtCustomerSalary").val();
+
+    /*create customer object*/
+    var customer={
+      id : customerID,
+      name : customerName,
+      address : customerAddress,
+      salary : customerSalary
+    }
+    /* alert(customer.id+ " " + customer.name+" "+customer.address+ " "+customer.salary);*/
+    console.log(customer);
+
+    /*push object value into array */
+    customerArray.push(customer);
+
+    console.log(customerArray);
+  }
+
+  function loadAllCustomers(){
+    /*remove all table body content before adding data*/
+    $("#tblCustomer").empty();
+
+    console.log("Hello");
+    /*load all customer details into table*/
+    for (var i = 0; i < customerArray.length; i++) {
+      var row = '<tr><td>'+customerArray[i].id+'</td><td>'+customerArray[i].name+'</td><td>'+customerArray[i].address+'</td><td>'+customerArray[i].salary+'</td></tr>';
+      $("#tblCustomer").append(row);
+      console.log("Hai");
+    }
+  }
+
+  function clearFields(){
+    $("#txtCustomerID").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerSalary").val("");
+  }
   /*method 01*/
       /*for (var i = 0; i < customerArray.length; i++) {
         console.log(customerArray[i].id); // get ID values only
@@ -192,12 +238,13 @@
   function deleteRowDetails(){
   $("#tblCustomer>tr").on('dblclick',function(){
     $(this).remove();     // catch the selected row at that moment
+    clearFields();
   });
 }
 
   /*when click clearAll button*/
   $("#btn-clear1").click(function(){
-    $("#tblCustomer").empty();
+   clearFields();
   });
     /*get all values in a array using for loop*/
 /* var arrayOfAges = [10,20,55,65,45,90,100,35];
