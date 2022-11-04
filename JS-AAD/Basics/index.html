@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS - OOP </title>
+</head>
+<body>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script>
+    //how to use a object and copy its value to a new one
+
+    // var customer={
+    //     id:'C001'
+    // }
+    //
+    // var customers=[];
+    //
+    // var cloneOfCustomer=Object.assign({},customer);
+    //
+    // customer.id='C002'
+
+
+    //So what we can do with objects
+
+    //can we change values after defined..?
+    var customer={
+        id:"C001",
+        name:'Kasun'
+    }
+
+    //chanage values
+    customer.id="C002"; // yes we can change values
+
+    //can we add new properties to the object..?
+    customer.age=20; // yes we can
+
+    //can we delete properties after defined.?
+    delete customer.id; // yes we can
+
+    //Then how to stop these.? and how to manage them as we wanted
+    //To do this we have property descriptors
+    Object.defineProperty(customer,'age',{
+        writable:false
+    });
+
+    //now try to change age value
+    customer.age//20
+    customer.age=30;
+    customer.age//20 not changed. so now this is a read only value
+
+    // enumerable = false kala wita Object.keys walin name eka hide wenwa,
+    // countable wenne ne
+    Object.defineProperty(customer,'name',{
+        enumerable:false
+    });
+    Object.keys(customer);  /*['id', 'salary']*/
+    delete customer.name;   /*delete wenwa*/
+
+   /* ======================configurable===========================*/
+
+    Object.getOwnPropertyDescriptor(customer,'salary');
+    Object.defineProperty(customer,'salary',{
+        writable:false
+    });
+    Object.defineProperty(customer,'salary',{
+        configurable:false
+    });
+    Object.keys(customer);
+    delete customer.salary;
+
+   //configuration false kalata psse aye eka true krnna be.
+   // configuration waladi ekparak okkoma define kalata psse, aye writable kiyna eka ekpark change krnna withrai, awasthawa thiyenne.
+    // wena kisima deyk krnna be .
+
+   /*value ekak nethi property ekk hadanne khmda?*/
+   // 2 types of properties
+    /*data properties
+    * Accessor properties*/
+
+    var item = {
+        code:'I00-001'  // if the value is directly assogned to a key, it is known ad=s data property.
+    }
+    /*value:I00-001
+    * enumerable:true
+    * writable:true
+    * configurable:true*/
+
+
+    //Accessor property
+/*
+get();
+set();
+configuration:false
+enumerable:false
+*/
+
+    Object.defineProperty(order,'name',{
+        get(){
+            return name;
+        },
+        set(newValue){
+            name=newValue;
+        },
+        enumerable:true,
+        configurable:true,
+    });
+
+    Object.defineProperty(order,'name',{
+        get(){
+            return name;
+        },
+        set(newValue){
+            name=newValue;
+        },
+        enumerable:true,
+        configurable:true,
+        writable:true
+    });
+    /*methnadi writable true kalahama, error ekk enwa.value ekk define nokara , variable ikk create krnna one unhama 2nd method eka use krnna*/
+
+/*leteral base object*/
+    var customer={
+        id:'C001',
+        name:'Rashmiya'
+    }
+    /*object base function*/
+    function Customer(){
+        this.id='C001';
+        this.name='Rashmiya';
+    }
+    var cusObject = new Customer();
+
+    /*methana Customer kiynne function ekak. eka use krla hadapu cusObject eka thma Object eka wenne.*/
+    function Item(code, name){
+        this.code = code;
+        this.name = name;
+    }
+    var itemObject = new Item('I001','Lux');
+
+    /*literal base object ekakata method ekak liyana widiha*/
+    var customer={
+        id:'C001',
+        getMyID:function(){
+            return this.id;
+        }
+    }
+    customer.id;
+    customer.getMyID();
+
+    /*function base*/
+    customer.getMyID=function(value){
+        return this.id+value;
+    }
+    customer.getMyID('C002');
+
+
+
+
+    /*literal base*/
+    var calculate={
+        a:100,
+        b:100,
+
+        getCalculateTotal: function(){
+            return this.a+this.b;
+        }
+    }
+    calculate.getCalculateTotal();
+
+    /*function base*/
+    function calculateFunction(){
+        this.a=100;
+        this.b=200;
+
+        this.calculateTotal=function(){
+            return this.a+this.b;
+        }
+    }
+    var n = new calculateFunction();
+    n.calculateTotal();
+
+
+    /*exercise-01*/
+    function Car(){
+        this.make='';
+        this.model='';
+        this.setDetails= function (make, model){
+            this.make=make;
+            this.model=model;
+        };
+        this.park=function(){
+            console.log(this.make+" "+this.model+" "+"is parking of 202 parking slot");
+        }
+    }
+
+    var c =  new Car();
+    c.setDetails('toyota','2022');
+    c.park();
+
+
+/*Exercise-02*/
+    function animal(name,cry){
+        this.name=name;
+        this.cry=cry;
+        this.changeName = function(newName){
+            this.name=newName;
+        };
+        this.changeCry=function(newCry){
+            this.cry=newCry;
+        };
+        this.crying=function (){
+            console.log(this.name+" "+"is "+this.cry);
+        }
+    }
+    var cat = new animal('cat','miyaw');
+    cat.changeName("Dog");
+    cat.changeCry("barking");
+    cat.crying();
+
+
+    /*Exercise-03*/
+function A(){
+    var id='C001';
+
+    this.setId=  function(newValue){
+        id = newValue;
+    };
+    this.getId = function(){
+        return this.id;
+    }
+}
+var a = new A();
+a.setId('C002');
+a.getId();
+
+
+   /*function base*/
+    calculate.calculateTotalTwo=function (value){
+        return this.a+this.b+value;
+    }
+    calculate.calculateTotalTwo(200);
+    // calculate object
+    //calculate total method
+    var calculate={
+        a:100,
+        b:100,
+
+        getFinal:function calculate(a,b){
+            this.a = a
+            this.b=b
+        }
+    }
+</script>
+
+</body>
+</html>

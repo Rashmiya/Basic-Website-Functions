@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01- Que</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css"> <!--import bootstrap for css-->
+    <style>
+        #row-element{
+            display: flex;
+            width: 500px;
+            height: 45px;
+            text-align: center;
+
+        }
+        #row-element div h1{
+            border: 2px solid black;
+            padding-top: 7px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container-fluid">
+        <form>
+            <div class="mb-3">
+                <label for="nameLabel" class="form-label">Name</label>
+                <input type="text" class="form-control" id="nameLabel" aria-describedby="nameLabel" style="width: 300px">
+                <div id="name" class="form-text">Enter a name what you most like</div>
+            </div>
+            <div class="mb-3">
+                <label for="color-picker-1" class="form-label">Choose a color</label>
+                <input id="color-picker-1" class="mx-auto" type="text" class="form-control" style="width: 300px">
+                <div id="color" class="form-text">Select a color what you most like</div>
+            </div>
+            <button type="button" id="btnAddToQue" class="btn btn-primary">Add To Que</button>
+        </form>
+    </section>
+    <section class="container-fluid">
+            <div id="row-element">
+
+
+            </div>
+    </section>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>  <!-- import the jQuery-->
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script> <!-- import bootstrap for js-->
+
+    <script>
+        var Quedata={
+            persons:[
+                {name:'kasun', color:'red'},
+                {name:'Rashmiya', color: 'yellow'},
+                {name:'Risni', color: 'green'}
+            ],
+            nextPerson:function (){
+                let lastPerson = this.persons.pop();
+                this.persons.unshift(lastPerson);
+            }
+        }
+
+        renderDivs();
+
+        function renderDivs(){
+            $('#row-element').empty();
+            for (let i = 0; i < Quedata.persons.length; i++) {
+                $('#row-element').append(`<div style="background-color: ${Quedata.persons[i].color}"><h1>${Quedata.persons[i].name}</h1></div>`);
+            }
+            Quedata.nextPerson();
+        }
+
+        setInterval(renderDivs,700);
+
+        $('#btnAddToQue').click(function (){
+
+        });
+    </script>
+</body>
+</html>
