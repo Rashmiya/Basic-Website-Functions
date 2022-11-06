@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer with javaScript objects</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+  <style>
+      section>h1{
+          padding-left: 171px;
+      }
+      body>section{
+          position: absolute;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 600px;
+          height: 400px;
+      }
+        section>div:nth-child(2){
+            width: 80%;
+            height: 30px;
+            background-color: red;
+            margin: 0px 0px 0px 50px;
+        }
+        section>div:nth-child(3){
+             width: 80%;
+            height: 237px;
+            margin-left: 50px;
+            margin-top: 20px;
+            border: 1px solid green;
+        }
+        section>button{
+            height: 40px;
+            background-color: black;
+            color: white;
+            width: 100px;
+            font-family: sans-serif;
+            font-size: 1.15em;
+        }
+        section>button:nth-child(4){
+            position: relative;
+            margin: 45px 50px 0px 147px;
+        }
+  </style>
+</head>
+<body>
+<section>
+    <h1>JS TIMER</h1>
+    <div></div>
+    <div id="display-window"></div>
+    <button id="start">Start</button>
+    <button id="end">End</button>
+</section>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script>
+  /*  let colors = ['green','red','yellow','blue','purple','orange'];
+
+  function setColors(){
+    for (let i = 0; i < colors.length; i++) {
+        $("#display-window").css('background-color', colors[i]);
+    }
+  }
+    $("#start").on('click',function (){
+       /!* alert("Hello, How Are You?");*!/
+        setColors();
+    });
+
+    $("#end").on('click',function (){
+        alert("I am fine, Thank you");
+    });
+*/
+
+    /*setInterval() and setTimeOut()*/
+    setTimeout(testOne,20000);   // calling only one time after the time period
+    setInterval(testOne,200);   // repeatively calling given method
+
+    function testOne(){
+        console.log("Test one method invoked");
+    }
+</script>
+</body>
+</html>
