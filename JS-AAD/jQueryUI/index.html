@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery UI</title>
+    <link rel="stylesheet" href="../assets/js/jquery-ui.min.css">
+
+    <style>
+        #mainDiv{
+            position: relative;
+            width:200px;
+            height: 200px;
+            background-color: red;
+            left: 200px;
+            top: 100px;
+        }
+        #subDiv{
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: relative;
+            margin: auto;
+            width:100px;
+            height: 100px;
+            border: 1px solid green;
+            background-color: darkslategrey;
+        }
+        #mainDiv> p{
+            text-align: center;
+            padding-top: 80px;
+        }
+        #image-area{
+            position: relative;
+            width: 50%;
+            height: 300px;
+           /* border: 1px solid red;*/
+            background: url("../assets/images/natureLove-2.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+    </div>
+    <div id="subDiv">
+    </div>
+
+    <div id="image-area">
+       <!-- <img src="../assets/images/natureLove-2.jpg" alt="natureLove Picture">-->
+    </div>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/oridomi.min.js"></script>
+    <!--<script>
+        // for draggable
+        /*$( function() {
+            $( "#draggable" ).draggable();
+        } );
+*/
+        /*for drag and drop*/
+        $( function() {
+            $( "#subDiv" ).draggable();
+            $( "#mainDiv" ).droppable({
+                drop: function( event, ui ) {
+                    $( this )
+                    .css("background","green");
+                }
+            });
+        } );
+    </script>-->
+
+    <script>
+      /*  var folded = new OriDomi('#image-area');*/
+
+      var $folded = $('#image-area').oriDomi({/* options object */});
+      // when using jQuery, iterate OriDomi methods over multiple elements like this:
+     /* $folded.oriDomi('accordion', 20);*/
+      /*$folded.oriDomi('reveal', 9);*/
+     /* $folded.oriDomi('curl', (-75));*/
+     /* $folded.oriDomi('foldUp');*/
+      $folded.oriDomi('fracture', 23);
+      // to access the OriDomi instance at the top of the jQuery selection directly:
+      var folded = $folded.oriDomi(true);
+      folded.accordion(10);
+    </script>
+</body>
+</html>

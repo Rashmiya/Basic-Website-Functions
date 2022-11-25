@@ -56,30 +56,31 @@
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
-  /*  let colors = ['green','red','yellow','blue','purple','orange'];
-
-  function setColors(){
-    for (let i = 0; i < colors.length; i++) {
-        $("#display-window").css('background-color', colors[i]);
-    }
+    let colors = ['green','red','yellow','blue','purple','orange'];
+    let i = 0;
+  function setColors() {
+      while (i < colors.length) {
+          $("#display-window").css('background-color', colors[i]);
+          console.log("Hello");
+      }
+      i++;
   }
     $("#start").on('click',function (){
-       /!* alert("Hello, How Are You?");*!/
-        setColors();
+       /* alert("Hello, How Are You?");*/
+        setInterval(setColors,100);
     });
 
     $("#end").on('click',function (){
         alert("I am fine, Thank you");
     });
-*/
 
     /*setInterval() and setTimeOut()*/
-    setTimeout(testOne,20000);   // calling only one time after the time period
+   /* setTimeout(testOne,20000);   // calling only one time after the time period
     setInterval(testOne,200);   // repeatively calling given method
 
     function testOne(){
         console.log("Test one method invoked");
-    }
+    }*/
 </script>
 </body>
 </html>
