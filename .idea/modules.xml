@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DemoWebApplication.iml" filepath="$PROJECT_DIR$/DemoWebApplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GAME/GAME.iml" filepath="$PROJECT_DIR$/GAME/GAME.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVASCRIPT/JAVASCRIPT.iml" filepath="$PROJECT_DIR$/JAVASCRIPT/JAVASCRIPT.iml" />
       <module fileurl="file://$PROJECT_DIR$/JS-AAD/JS-OOP.iml" filepath="$PROJECT_DIR$/JS-AAD/JS-OOP.iml" />
     </modules>
