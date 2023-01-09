@@ -1,0 +1,32 @@
+/*child combinator*/
+/*select direct child*/
+/*
+section>h1{
+    color: red;
+}
+body>h1{
+    color: deeppink;
+}
+
+*/
+/*Decendent Combinator*/
+/*parent element eka ethule , one thenaka inna ekak.*/
+/*body h1{
+    color: orange;
+    border: 2px solid blue;
+}*/
+
+/*adjacent combinator*/
+/*select just after h1 element*/
+/*h1+p{
+    color: red;
+}*/
+
+/*general siblings combinator*/
+/*select all the elements after h1 element*/
+h1~ul{
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: bold;
+}
+

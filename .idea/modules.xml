@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/03-JAVASCRIPT/03-JAVASCRIPT.iml" filepath="$PROJECT_DIR$/03-JAVASCRIPT/03-JAVASCRIPT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-AJAX/AJAX.iml" filepath="$PROJECT_DIR$/06-AJAX/AJAX.iml" />
       <module fileurl="file://$PROJECT_DIR$/DemoWebApplication.iml" filepath="$PROJECT_DIR$/DemoWebApplication.iml" />
-      <module fileurl="file://$PROJECT_DIR$/GAME/GAME.iml" filepath="$PROJECT_DIR$/GAME/GAME.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JAVASCRIPT/JAVASCRIPT.iml" filepath="$PROJECT_DIR$/JAVASCRIPT/JAVASCRIPT.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JS-AAD/JS-OOP.iml" filepath="$PROJECT_DIR$/JS-AAD/JS-OOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-GAME/GAME.iml" filepath="$PROJECT_DIR$/04-GAME/GAME.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05-JS-AAD/JS-OOP.iml" filepath="$PROJECT_DIR$/05-JS-AAD/JS-OOP.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,115 @@
+/*Type Selector - To select elements from its type*/
+/*h1{
+    color: red;
+    font-size: 60px;
+    border: black;
+}*/
+
+/*Universal Selector - To select all elements at once.*/
+/**{
+    font-size: 20px;
+}*/
+
+/*ID Selector-  To select unique element*/
+/*#p1{
+    color: #e51010;
+}*/
+
+/*Class Selector - To select group of element*/
+/*.para{
+    color: blue;
+    border: 3px solid yellow;
+}*/
+
+/*Attribute Selector -  select elements using attributes*/
+/*[id]{
+    color: brown;
+    background-color: aqua;
+}*/
+
+/*Grouping Selector*/
+/*h1,.para,#p1{
+    color: orange;
+}*/
+
+/*psudo class selector*/
+/*h1:hover{
+    color: blue;
+}*/
+
+/*Pesudo Class*/
+/*h1:first-child{
+    color: red;
+}
+h1:nth-child(2){
+    color: brown;
+}
+h1:nth-child(4){
+    color: blue;
+}
+li:last-child{
+    color: darkblue;
+}*/
+/*h1:before{
+    content: "😍";
+    font-size: 22px;
+}
+h1:after{
+    content: "😅";
+}*/
+/*a:active{
+    color: deeppink;
+}
+a:hover{
+    color:green;
+}*/
+/*input:focus{
+    background-color: orange;
+}*/
+
+/*Psudo element selctor*/
+/*h1::first-letter{
+    color: red;
+    font-size: 35px;
+}
+p::first-line{
+    color: deeppink;
+    font-weight: bold;
+}*/
+
+/*
+input::placeholder{
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: lighter;
+}
+*/
+
+/*input::file-selector-button{
+    color: red;
+}*/
+
+/*Text ekk api select krgnnkota, eke colors change krgnn pluwn me selction eken.*/
+/*p::selection{
+    color: red;
+    background-color: white;
+    border: 5px;
+}*/
+
+/*Can make our own style with this.*/
+/*li::marker{
+    content: "# ";
+    font-weight: bold;
+
+}*/
+
+li:nth-child(3){
+    color: rgba(217, 26, 26, 0.47);
+}
+p:nth-child(6){
+    color: deeppink;
+    font-size: 20px;
+}
+
+
+

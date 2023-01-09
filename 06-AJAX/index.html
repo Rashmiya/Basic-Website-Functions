@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Implementation</title>
+</head>
+<body>
+    <h1>Hello AJAX!...</h1>
+    <h2>Let's implement AJAX with XMLHTTPRequest Object</h2>
+    <button id="btn" type="button">Send A Request</button>
+
+    <p id="responsePara"></p>
+    <script src="assets/js/jquery-3.6.1.min.js"></script> <!--import the jQuery library-->
+    <script>
+//01
+       /* $("#btn").on('click',function (){
+            var http = new XMLHttpRequest();
+            http.open("GET","db/db.txt");
+            http.send();
+        });
+*/
+
+//02
+       /* $("#btn").on('click',function (){
+            var http = new XMLHttpRequest();
+            http.open("GET","db/db.txt");
+            http.responseText;  /!*the property for got response according to the request, which we send*!/
+            http.send();
+        });*/
+
+//03
+       /*$("#btn").on('click',function (){
+           console.log("request started");
+
+           var http = new XMLHttpRequest();
+           console.log(http.status, "After the XMLHTTPObject created");     // 0 - uninitialized
+
+           http.open("GET","db/db.txt");
+           console.log(http.status, "After the Open method invoked");       // 0 - uninitialized
+
+           http.responseText; /!* the property for got response according to the request, which we send*!/
+           console.log(http.status, "After the response text printed");     // 0 - uninitialized
+
+           http.send();
+           console.log(http.status, "After the send method invoked");        // 0 - uninitialized
+
+           console.log("request finished");
+       });
+*/
+
+//04
+       /*$("#btn").on('click',function (){
+           console.log("request started");
+
+           var http = new XMLHttpRequest();
+           console.log(http.readyState, "After the XMLHTTPObject created");     // 0 - uninitialized
+
+           http.open("GET","db/db.txt");
+           console.log(http.readyState, "After the Open method invoked");       // 1 - loading
+
+           http.responseText; /!* the property for got response according to the request, which we send*!/
+           console.log(http.readyState, "After the response text printed");     // 1 - loading
+
+           http.send();
+           console.log(http.readyState, "After the send method invoked");        // 1 - loading
+
+           console.log("request finished");
+       });
+*/
+
+//05
+    /*   $("#btn").on('click',function (){
+           //ready status of AJAX requests
+           /!*   [1] - uninitialized
+                [2] - loading
+                [3] - loaded
+                [4] - interactive
+                [5] - completed     *!/
+
+           console.log("request started");
+
+           var http = new XMLHttpRequest();
+           console.log(http.readyState, "After the XMLHTTPObject created");     // 0 - uninitialized
+
+           http.open("GET","db/db.txt");
+           console.log(http.readyState, "After the Open method invoked");       // 1 - loading
+
+           http.responseText; /!* the property for got response according to the request, which we send*!/
+           console.log(http.readyState, "After the response text printed");     // 1 - loading
+
+           http.send();
+           console.log(http.readyState, "After the send method invoked");        // 1 - loading
+
+           // when the request status are changed, please run this.
+           http.onreadystatechange = function (){
+               console.log(http.readyState,"Inside on ready state change event");  //2-loaded, 3-interactive , 4-complete
+               console.log(http.status);
+               console.log(http.responseText);
+           }
+
+           console.log("request finished");
+       });*/
+
+//06
+    $("#btn").on('click',function (){
+        console.log("request started");
+
+        var http = new XMLHttpRequest();
+        console.log(http.readyState, "After the XMLHTTPObject created");     // 0 - uninitialized
+
+        http.open("GET","db/db.txt");
+        console.log(http.readyState, "After the Open method invoked");       // 1 - loading
+
+        http.responseText; /* the property for got response according to the request, which we send*/
+        console.log(http.readyState, "After the response text printed");     // 1 - loading
+
+        http.send();
+        console.log(http.readyState, "After the send method invoked");        // 1 - loading
+
+    // when the request status are changed, please run this.
+        http.onreadystatechange = function (){
+            if(http.readyState == 4 && http.status == 200){
+               $("#responsePara").text(http.responseText);
+            }
+        }
+
+        console.log("request finished");
+    });
+       /* console.log(http.responseText);*/
+
+    </script>
+</body>
+</html>
