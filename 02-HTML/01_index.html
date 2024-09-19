@@ -1,22 +1,26 @@
 <!DOCTYPE html> <!--preamble fully standard mode-->
 <html lang="en">
-<head>      <!--Document Meta Data-->
-   <meta charset="UTF-8">
 
-   <title>Hyper Text Markup Language</title> 
+<head> <!--Document Meta Data-->
+   <meta charset="UTF-8">
+   <!-- title of the page -->
+   <title>Hyper Text Markup Language</title>
    <link rel="icon" href="icon.png">
 
    <base href="localhost">
 
    <meta name="keyword" content="IJSE,GDSE,Internet Technologies,GDSE 59,HTML">
-   <meta name ="description" content="This is a demonstrate for GDSE students for learning HTML">
+   <meta name="description" content="This is a demonstrate for GDSE students for learning HTML">
    <meta name="author" content="Institute of Software Enginerring">
    <meta name="owner" content="IJSE">
-
+   <!-- specifies the browser viewport. This setting is for a mobile-optimized site -->
    <meta name="viewport" content="width=device-width initial-scale=1 maximum-scale=8 minimum-scale=2">
    <meta name="theme-color" content="blue">
 </head>
-<body>    <!--Sectioning root-->
+<!-- content of the page -->
+
+<body> <!--Sectioning root-->
+
    <header>
       <nav>
          <ol>
@@ -37,14 +41,28 @@
             <li>Contact Us</li>
          </ul>
       </nav>
+      <div>ALL RECIPE</div>
+      <nav>
+         <ul>
+            <li>
+               <a href="#demo">Ingredients</a>
+            </li>
+            <li>
+               <a href="#demo">Steps</a>
+            </li>
+            <li>
+               <a href="#demo">Subscribe</a>
+            </li>
+         </ul>
+      </nav>
    </header>
 
    <main>
       <aside>
          <nav>
             <dl>
-               <dt>IJSE</dt>   <!--description title-->
-               <dd>Institute of Software Engineering</dd>   <!--description data-->
+               <dt>IJSE</dt> <!--description title-->
+               <dd>Institute of Software Engineering</dd> <!--description data-->
 
                <dt>CMJD</dt>
                <dd>Comprehensive Master in Java Developing</dd>
@@ -53,12 +71,14 @@
          <section></section>
       </aside>
       <section>
-         <section> <div></div>  <!--flow content--></section>
+         <section>
+            <div></div> <!--flow content-->
+         </section>
          <article>
-           <figure>
-              <!--img or whatever you want-->
-              <figcaption>An elephant at sunset</figcaption>
-           </figure>
+            <figure>
+               <!--img or whatever you want-->
+               <figcaption>An elephant at sunset</figcaption>
+            </figure>
          </article>
          <article>
             <!--Text Content-->
@@ -114,11 +134,42 @@
                demo content for paragraph.Let's see how it works.</p>
          </article>
       </section>
+      <h1>Good Old Fashion Pancakes</h1>
+      <img src="https://images.unsplash.com/photo-1575853121743-60c24f0a7502" alt="Pancakes" width="250" />
+      <h2 id="ingredients">Ingredients</h2>
+      <ol>
+         <li>
+            <input type="checkbox" />1 ½ cups all-purpose flour
+         </li>
+         <li> <input type="checkbox" /> ½ teaspoons baking powder</li>
+         <li> <input type="checkbox" />1 teaspoon salt</li>
+         <li><input type="checkbox" /> 1 tablespoon white sugar</li>
+         <li><input type="checkbox" /> ¼ cups milk</li>
+         <li><input type="checkbox" /> ¼ cups milk</li>
+         <li><input type="checkbox" /> egg</li>
+      </ol>
+      <h2 id="steps">Steps</h2>
+      <h4>Step 1</h4>
+      <p>In a large bowl, sift together the flour, baking powder, salt and sugar.
+         Make a well in the center and pour in the milk, egg and melted butter;
+         mix until smooth.</p>
+      <h4>Step 2</h4>
+      <p> Heat a lightly oiled griddle or frying pan over medium-high heat. Pour
+         or scoop the batter onto the griddle, using approximately 1/4 cup for
+         each pancake. Brown on both sides and serve hot.</p>
    </main>
 
    <footer>
       <address></address>
+      <h6 id="subscribe">Subscribe</h6>
+      <form>
+         <input type="email" placeholder="Enter Email Address" />
+         <button>Submit</button>
+      </form>
+      <br />
+      <div>&copy;dakota kelly at Allrecipe.com</div>
    </footer>
 
 </body>
+
 </html>
