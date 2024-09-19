@@ -1,0 +1,64 @@
+body {
+    background-color: #eaeff1;
+    font-family: "Raleway", sans-serif;
+  }
+#container {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+img {
+    width: 100%;
+    border-radius: 12px;
+    height: 214px;
+    object-fit: cover;
+}
+.card {
+    background-color: white;
+    border: 1px solid #bacdd8;
+    padding: 8px;
+    border-radius: 12px;
+}
+.tag {
+    padding: 4px 8px;
+    border: 1px solid #e5eaed;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #788697;
+    margin-right: 8px;
+}
+.name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+p {
+    font-size: 14px;
+    color: #7f8c9b;
+    line-height: 150%;
+}
+button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+  
+    font-weight: 600;
+    color: #0077ff;
+    background-color: #e0efff;
+  
+    /* Button is inline-block element by default, it need to have block display for margin: 0 auto; to work */
+    margin: 0 auto;
+    display: block;
+  
+    /* Button is a clickable element, therefore it should have a pointer cursor */
+    cursor: pointer;
+  }
+button:focus,button:hover {
+  background-color: #0077ff;
+  color: #e0efff;
+}
+.card_details{
+    margin-top: 15px;
+    margin-left: 10px;
+}
